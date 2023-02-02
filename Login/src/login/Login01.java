@@ -32,7 +32,7 @@ public class Login01 extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         passTxt = new javax.swing.JPasswordField();
-        jPanel2 = new javax.swing.JPanel();
+        btnEntrar = new javax.swing.JPanel();
         BtnLogin = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
@@ -65,7 +65,7 @@ public class Login01 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/favicon.png"))); // NOI18N
         jLabel2.setText("LOGO");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 160, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 160, 30));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
@@ -84,6 +84,11 @@ public class Login01 extends javax.swing.JFrame {
         userTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 userTxtMousePressed(evt);
+            }
+        });
+        userTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userTxtActionPerformed(evt);
             }
         });
         jPanel1.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 430, 30));
@@ -108,7 +113,7 @@ public class Login01 extends javax.swing.JFrame {
         });
         jPanel1.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 400, 30));
 
-        jPanel2.setBackground(new java.awt.Color(0, 134, 190));
+        btnEntrar.setBackground(new java.awt.Color(0, 134, 190));
 
         BtnLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         BtnLogin.setForeground(new java.awt.Color(255, 255, 255));
@@ -127,24 +132,24 @@ public class Login01 extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnEntrarLayout = new javax.swing.GroupLayout(btnEntrar);
+        btnEntrar.setLayout(btnEntrarLayout);
+        btnEntrarLayout.setHorizontalGroup(
+            btnEntrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnEntrarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(BtnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        btnEntrarLayout.setVerticalGroup(
+            btnEntrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnEntrarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(BtnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 170, 50));
+        jPanel1.add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 170, 50));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -183,11 +188,15 @@ public class Login01 extends javax.swing.JFrame {
         exitBtn.setLayout(exitBtnLayout);
         exitBtnLayout.setHorizontalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BtnCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitBtnLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(BtnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         exitBtnLayout.setVerticalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BtnCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitBtnLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(BtnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -242,24 +251,24 @@ public class Login01 extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCerrarMouseClicked
 
     private void BtnCerrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCerrarMouseEntered
-        BtnCerrar.setBackground(Color.red);
+        exitBtn.setBackground(Color.red);
 
 // TODO add your handling code here:
     }//GEN-LAST:event_BtnCerrarMouseEntered
 
     private void BtnCerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCerrarMouseExited
-        BtnCerrar.setBackground(Color.white);
+        exitBtn.setBackground(Color.white);
 
     }//GEN-LAST:event_BtnCerrarMouseExited
 
     private void BtnLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLoginMouseEntered
-        BtnLogin.setBackground(new Color(0, 156, 223));
+        btnEntrar.setBackground(new Color(0, 156, 223));
 
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnLoginMouseEntered
 
     private void BtnLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLoginMouseExited
-        BtnLogin.setBackground(new Color(0, 134, 190));// TODO add your handling code here:
+        btnEntrar.setBackground(new Color(0, 134, 190));// TODO add your handling code here:
     }//GEN-LAST:event_BtnLoginMouseExited
 
     private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
@@ -291,6 +300,10 @@ public class Login01 extends javax.swing.JFrame {
         javax.swing.JOptionPane.showMessageDialog(this, "Intento de login con los datos:\nUsuario: " + userTxt.getText() + "\nContraseña: " + String.valueOf(passTxt.getPassword()), "LOGIN", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnLoginMouseClicked
+
+    private void userTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userTxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,6 +343,7 @@ public class Login01 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BtnCerrar;
     private javax.swing.JLabel BtnLogin;
+    private javax.swing.JPanel btnEntrar;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -339,7 +353,6 @@ public class Login01 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
