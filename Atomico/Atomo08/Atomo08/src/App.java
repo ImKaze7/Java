@@ -8,7 +8,7 @@ import javax.swing.JLayeredPane;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        JLabel label1 = new JLabel();
+        JLabel label1 = new JLabel();               
         label1.setOpaque(true);
         label1.setBackground(Color.red);
         label1.setBounds(50,50,200,200);
