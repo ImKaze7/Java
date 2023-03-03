@@ -1,4 +1,4 @@
-public class Principal{
+public class Principal5{
     public static void main(String[] args) {
         ClaseHija_Suma5 mensajeroSuma = new ClaseHija_Suma5();
         mensajeroSuma.PedirDatos();
