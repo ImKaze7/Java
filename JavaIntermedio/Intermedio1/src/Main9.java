@@ -17,6 +17,7 @@ public class Main9 {
         resultado = valor1 / valor2;
 
         System.out.println("División es igual a: " + resultado);
+        entrada.close();
         }catch(Exception e){
             System.out.println("Error!!!" + e);
         }finally{

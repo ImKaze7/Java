@@ -67,6 +67,7 @@ public abstract class Main8 {
 
     public void setSaldo(int saldo){
         this.saldo = saldo;
+        
     }
     }
 
