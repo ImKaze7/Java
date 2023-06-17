@@ -1,0 +1,164 @@
+package mantenimiento;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTextField;
+
+public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
+	private JLabel lblNewLabel;
+	private JComboBox cboMode;
+	private JLabel lblNewLabel_1;
+	private JTextField txtPrecio;
+	private JButton btnNewButton_1;
+	private JTextField txtAncho;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
+	private JTextField txtLargo;
+	private JTextField txtEspe;
+	private JTextField txtConte;
+	
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			GUI_ConsultarCeramico dialog = new GUI_ConsultarCeramico();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public GUI_ConsultarCeramico() {
+		setTitle("Consultar Cerámico");
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(null);
+		
+		lblNewLabel = new JLabel("Modelo");
+		lblNewLabel.setBounds(10, 24, 46, 14);
+		getContentPane().add(lblNewLabel);
+		
+		cboMode = new JComboBox();
+		cboMode.addActionListener(this);
+		cboMode.setModel(new DefaultComboBoxModel(new String[] {"Cinza Plus", "Luxury", "Austria", "Yungay Mix", "Thalía"}));
+		cboMode.setBounds(83, 20, 220, 22);
+		getContentPane().add(cboMode);
+		
+		lblNewLabel_1 = new JLabel("Precio (S/)");
+		lblNewLabel_1.setBounds(10, 61, 58, 14);
+		getContentPane().add(lblNewLabel_1);
+		
+		txtPrecio = new JTextField();
+		txtPrecio.setEditable(false);
+		txtPrecio.setBounds(83, 58, 220, 20);
+		getContentPane().add(txtPrecio);
+		txtPrecio.setColumns(10);
+		
+		btnNewButton_1 = new JButton("Procesar");
+		btnNewButton_1.addActionListener(this);
+		btnNewButton_1.setBounds(335, 20, 89, 23);
+		getContentPane().add(btnNewButton_1);
+		
+		txtAncho = new JTextField();
+		txtAncho.setEditable(false);
+		txtAncho.setBounds(83, 95, 220, 20);
+		getContentPane().add(txtAncho);
+		txtAncho.setColumns(10);
+		
+		lblNewLabel_2 = new JLabel("Ancho (cm)");
+		lblNewLabel_2.setBounds(10, 98, 58, 14);
+		getContentPane().add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("Largo (cm)");
+		lblNewLabel_3.setBounds(10, 130, 58, 14);
+		getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("Espesor (mm)");
+		lblNewLabel_4.setBounds(10, 166, 75, 14);
+		getContentPane().add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("Contenido");
+		lblNewLabel_5.setBounds(10, 198, 66, 14);
+		getContentPane().add(lblNewLabel_5);
+		
+		txtLargo = new JTextField();
+		txtLargo.setEditable(false);
+		txtLargo.setBounds(83, 127, 220, 20);
+		getContentPane().add(txtLargo);
+		txtLargo.setColumns(10);
+		
+		txtEspe = new JTextField();
+		txtEspe.setEditable(false);
+		txtEspe.setBounds(83, 163, 220, 20);
+		getContentPane().add(txtEspe);
+		txtEspe.setColumns(10);
+		
+		txtConte = new JTextField();
+		txtConte.setEditable(false);
+		txtConte.setBounds(83, 195, 220, 20);
+		getContentPane().add(txtConte);
+		txtConte.setColumns(10);
+	}
+	
+	
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == cboMode) {
+			actionPerformedCboMode(e);
+		}
+		
+	}
+	void ConsultarModelo(){
+int mode;
+		
+		mode = cboMode.getSelectedIndex();
+
+		switch(mode) {
+		case 0: txtPrecio.setText(precio0 + " soles");
+				txtAncho.setText(ancho0 + "");
+				txtLargo.setText(largo0 + "");
+				txtEspe.setText(espesor0 + "");
+				txtConte.setText(contenido0 + "");break;
+		case 1:txtPrecio.setText(precio1 + " soles");
+		txtAncho.setText(ancho1 + "");
+		txtLargo.setText(largo1 + "");
+		txtEspe.setText(espesor1 + "");
+		txtConte.setText(contenido1 + "");break;
+		case 2:txtPrecio.setText(precio2 + " soles");
+		txtAncho.setText(ancho2 + "");
+		txtLargo.setText(largo2 + "");
+		txtEspe.setText(espesor2 +"");
+		txtConte.setText(contenido2 + "");break;
+		case 3:txtPrecio.setText(precio3+ " soles");
+		txtAncho.setText(ancho3+"");
+		txtLargo.setText(largo3+"");
+		txtEspe.setText(espesor3+"");
+		txtConte.setText(contenido3+"");break;
+		case 4:txtPrecio.setText(precio4+ " soles");
+		txtAncho.setText(ancho4+"");
+		txtLargo.setText(largo4+"");
+		txtEspe.setText(espesor4+"");
+		txtConte.setText(contenido4+"");break;
+		
+		}
+	}
+	protected void actionPerformedCboMode(ActionEvent e) {
+	ConsultarModelo();
+	}
+}
