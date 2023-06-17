@@ -8,9 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import mantenimiento.GUI_ConsultarCeramico;
-import proyecto.Figura5;
-import mantenimiento.Figura3;
-import mantenimiento.Figura4;
+import proyecto.GUI_Vender;
+import mantenimiento.GUI_ModificarCeramico;
+import mantenimiento.GUI_ListarCeramico;
 
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -164,25 +164,27 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		}
 	}
 	protected static void actionPerformedmnNewMenu(ActionEvent e) {
-		System.exit(0);
+		System.exit(0);		
 
 	}
 	protected static void actionPerformedMntmNewMenuItem_1(ActionEvent e) {
 
 		GUI_ConsultarCeramico newFrame = new GUI_ConsultarCeramico();
 		newFrame.setVisible(true);
+		
+		
 
 	}
 	protected static void actionPerformedMntmNewMenuItem_2(ActionEvent e) {
-		Figura3 newFrame = new Figura3();
+		GUI_ModificarCeramico newFrame = new GUI_ModificarCeramico();
 		newFrame.setVisible(true);
 	}
 	protected static void actionPerformedMntmNewMenuItem_3(ActionEvent e) {
-		Figura4 newFrame = new Figura4();
+		GUI_ListarCeramico newFrame = new GUI_ListarCeramico();
 		newFrame.setVisible(true);
 }
 	protected static void actionPerformedMntmNewMenuItem_4(ActionEvent e) {
-		Figura5 newFrame = new Figura5();
+		GUI_Vender newFrame = new GUI_Vender();
 		newFrame.setVisible(true);
 	}
 

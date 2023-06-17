@@ -19,7 +19,6 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 	private JComboBox cboMode;
 	private JLabel lblNewLabel_1;
 	private JTextField txtPrecio;
-	private JButton btnNewButton_1;
 	private JTextField txtAncho;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
@@ -29,7 +28,41 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 	private JTextField txtEspe;
 	private JTextField txtConte;
 	
+	public static String modelo0 ="Cinza Plus";
+	public static double precio0 = 92.56;
+	public static double ancho0 = 62.00;
+	public static double largo0 = 62.00;
+	public static double espesor0 = 8;
+	public static int contenido0 = 6;
 	
+	public static String modelo1 = "Luxury";
+	public static double precio1 = 42.77;
+	public static double ancho1 = 60;
+	public static double largo1 = 60;
+	public static double espesor1 = 8.5;
+	public static int contenido1 = 6;
+	
+	public static String modelo2 = "Austria";
+	public static double precio2 = 52.45;
+	public static double ancho2 = 45;
+	public static double largo2 = 45;
+	public static double espesor2 = 6.5;
+	public static int contenido2 = 12;
+	
+	public static String modelo3 = "Yungay Mix";
+	public static double precio3 = 55.89;
+	public static double ancho3 = 80;
+	public static double largo3 = 120;
+	public static double espesor3 = 6.8;
+	public static int contenido3 = 9;
+	
+	public static String modelo4 = "Thalía";
+	public static double precio4 = 45;
+	public static double ancho4 = 45;
+	public static double largo4 = 11.8;
+	public static double espesor4 = 7.2;
+	public static int contenido4 = 10;
+	private JButton btnNewButton;
 	/**
 	 * Launch the application.
 	 */
@@ -71,11 +104,6 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 		getContentPane().add(txtPrecio);
 		txtPrecio.setColumns(10);
 		
-		btnNewButton_1 = new JButton("Procesar");
-		btnNewButton_1.addActionListener(this);
-		btnNewButton_1.setBounds(335, 20, 89, 23);
-		getContentPane().add(btnNewButton_1);
-		
 		txtAncho = new JTextField();
 		txtAncho.setEditable(false);
 		txtAncho.setBounds(83, 95, 220, 20);
@@ -115,18 +143,25 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 		txtConte.setBounds(83, 195, 220, 20);
 		getContentPane().add(txtConte);
 		txtConte.setColumns(10);
+		
+		btnNewButton = new JButton("Cerrar");
+		btnNewButton.addActionListener(this);
+		btnNewButton.setBounds(335, 24, 89, 23);
+		getContentPane().add(btnNewButton);
 	}
 	
 	
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnNewButton) {
+			actionPerformedBtnNewButton(e);
+		}
 		if (e.getSource() == cboMode) {
 			actionPerformedCboMode(e);
 		}
 		
 	}
 	void ConsultarModelo(){
-int mode;
-		
+		int mode;
 		mode = cboMode.getSelectedIndex();
 
 		switch(mode) {
@@ -156,9 +191,15 @@ int mode;
 		txtEspe.setText(espesor4+"");
 		txtConte.setText(contenido4+"");break;
 		
-		}
+		
+	}
+		
+		
 	}
 	protected void actionPerformedCboMode(ActionEvent e) {
 	ConsultarModelo();
+	}
+	protected void actionPerformedBtnNewButton(ActionEvent e) {
+		System.exit(0);
 	}
 }
