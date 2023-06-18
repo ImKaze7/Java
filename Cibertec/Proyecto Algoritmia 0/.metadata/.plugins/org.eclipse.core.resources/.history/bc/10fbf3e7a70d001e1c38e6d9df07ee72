@@ -156,14 +156,10 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		contentPanel.add(btnCerrar);
 		
 		btnGrabar = new JButton("Grabar");
-		btnGrabar.addActionListener(this);
 		btnGrabar.setBounds(335, 50, 89, 23);
 		contentPanel.add(btnGrabar);
 	}
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btnGrabar) {
-			actionPerformedBtnGrabar(e);
-		}
 		if (e.getSource() == cboMode) {
 			actionPerformedCboMode(e);
 		}
@@ -205,8 +201,5 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 	
 	protected void actionPerformedCboMode(ActionEvent e) {
 		ConsultarModelo();
-	}
-	protected void actionPerformedBtnGrabar(ActionEvent e) {
-		precio0 = Double.parseDouble(txtPrecio.getText());
 	}
 }

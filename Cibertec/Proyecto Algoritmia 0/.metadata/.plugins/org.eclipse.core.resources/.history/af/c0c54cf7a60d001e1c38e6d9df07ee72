@@ -25,9 +25,9 @@ public class GUI_ListarCeramico extends JDialog implements ActionListener {
 
 	private final JPanel contentPanel = new JPanel();
 	private JButton btnListar;
-	private JButton btnNewButton;
-	private JScrollPane scrollPane;
 	private JTextArea txtS;
+	private JScrollPane scrollPane;
+	private JButton btnNewButton;
 
 	/**
 	 * Launch the application.
@@ -47,27 +47,27 @@ public class GUI_ListarCeramico extends JDialog implements ActionListener {
 	 */
 	public GUI_ListarCeramico() {
 		setTitle("Listar Cerámico");
-		setBounds(100, 100, 516, 381);
+		setBounds(100, 100, 499, 305);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		
 		btnListar = new JButton("Listar");
-		btnListar.setBounds(235, 308, 89, 23);
+		btnListar.setBounds(239, 236, 89, 23);
 		btnListar.addActionListener(this);
 		contentPanel.setLayout(null);
 		contentPanel.add(btnListar);
 		
-		btnNewButton = new JButton("Cerrar");
-		btnNewButton.setBounds(136, 308, 89, 23);
-		contentPanel.add(btnNewButton);
-		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 21, 480, 279);
+		scrollPane.setBounds(31, 26, 423, 199);
 		contentPanel.add(scrollPane);
 		
 		txtS = new JTextArea();
 		scrollPane.setViewportView(txtS);
+		
+		btnNewButton = new JButton("Cerrar");
+		btnNewButton.setBounds(137, 236, 89, 23);
+		contentPanel.add(btnNewButton);
 		
 
 

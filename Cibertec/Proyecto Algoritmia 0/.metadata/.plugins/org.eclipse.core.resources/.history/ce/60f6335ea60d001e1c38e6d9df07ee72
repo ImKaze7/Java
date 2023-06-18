@@ -156,14 +156,10 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		contentPanel.add(btnCerrar);
 		
 		btnGrabar = new JButton("Grabar");
-		btnGrabar.addActionListener(this);
 		btnGrabar.setBounds(335, 50, 89, 23);
 		contentPanel.add(btnGrabar);
 	}
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btnGrabar) {
-			actionPerformedBtnGrabar(e);
-		}
 		if (e.getSource() == cboMode) {
 			actionPerformedCboMode(e);
 		}
@@ -175,38 +171,36 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		mode = cboMode.getSelectedIndex();
 
 	switch(mode) {
-	case 0: txtPrecio.setText(Double.toString(precio0));
-			txtAncho.setText(Double.toString(ancho0));
-			txtLargo.setText(Double.toString(largo0));
-			txtEspe.setText(Double.toString(espesor0));
-			txtConte.setText(Double.toString(contenido0) );break;
-	case 1:txtPrecio.setText(Double.toString(precio1 ));
-			txtLargo.setText(Double.toString(largo1 ));
-			txtEspe.setText(Double.toString(espesor1));
-			txtConte.setText(Double.toString(contenido1));break;
-	case 2:txtPrecio.setText(Double.toString(precio2));
-			txtAncho.setText(Double.toString(ancho2));
-			txtLargo.setText(Double.toString(largo2));
-			txtEspe.setText(Double.toString(espesor2));
-			txtConte.setText(Double.toString(contenido2));break;
-	case 3:txtPrecio.setText(Double.toString(precio3));
-			txtAncho.setText(Double.toString(ancho3));
-			txtLargo.setText(Double.toString(largo3));
-			txtEspe.setText(Double.toString(espesor3));
-			txtConte.setText(Double.toString(contenido3));break;
-	case 4:txtPrecio.setText(Double.toString(precio4));
-			txtAncho.setText(Double.toString(ancho4));
-			txtLargo.setText(Double.toString(largo4));
-			txtEspe.setText(Double.toString(espesor4));
-			txtConte.setText(Double.toString(contenido4));break;
+	case 0: txtPrecio.setText(precio0 + " soles");
+			txtAncho.setText(ancho0 + "");
+			txtLargo.setText(largo0 + "");
+			txtEspe.setText(espesor0 + "");
+			txtConte.setText(contenido0 + "");break;
+	case 1:txtPrecio.setText(precio1 + " soles");
+			txtAncho.setText(ancho1 + "");
+			txtLargo.setText(largo1 + "");
+			txtEspe.setText(espesor1 + "");
+			txtConte.setText(contenido1 + "");break;
+	case 2:txtPrecio.setText(precio2 + " soles");
+			txtAncho.setText(ancho2 + "");
+			txtLargo.setText(largo2 + "");
+			txtEspe.setText(espesor2 +"");
+			txtConte.setText(contenido2 + "");break;
+	case 3:txtPrecio.setText(precio3+ " soles");
+			txtAncho.setText(ancho3+"");
+			txtLargo.setText(largo3+"");
+			txtEspe.setText(espesor3+"");
+			txtConte.setText(contenido3+"");break;
+	case 4:txtPrecio.setText(precio4+ " soles");
+			txtAncho.setText(ancho4+"");
+			txtLargo.setText(largo4+"");
+			txtEspe.setText(espesor4+"");
+			txtConte.setText(contenido4+"");break;
 	}
 	
 }
 	
 	protected void actionPerformedCboMode(ActionEvent e) {
 		ConsultarModelo();
-	}
-	protected void actionPerformedBtnGrabar(ActionEvent e) {
-		precio0 = Double.parseDouble(txtPrecio.getText());
 	}
 }
