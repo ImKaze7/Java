@@ -1,0 +1,22 @@
+
+	public void actionPerformed(ActionEvent e) {
+		
+		if (e.getSource() == btnGrabar) {
+			actionPerformedBtnGrabar(e);
+		}
+		
+		if (e.getSource() == cboMode) {
+			actionPerformedCboMode(e);
+		
+}	
+		}
+	
+protected void actionPerformedCboMode(ActionEvent e) {
+ConsultarModelo();
+}
+protected void actionPerformedBtnGrabar(ActionEvent e) {
+	
+}
+
+}
+

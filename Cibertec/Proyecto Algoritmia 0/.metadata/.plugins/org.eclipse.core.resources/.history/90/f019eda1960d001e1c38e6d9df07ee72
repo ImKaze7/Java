@@ -1,0 +1,119 @@
+package mantenimiento;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+
+public class GUI_ModificarCeramico2 extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JComboBox cboMode;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
+	private JTextField txtPrecio;
+	private JTextField txtAncho;
+	private JTextField txtLargo;
+	private JTextField txtEspe;
+	private JTextField txtConte;
+	private JButton btnCerrar;
+	private JButton btnGrabar;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			GUI_ModificarCeramico2 dialog = new GUI_ModificarCeramico2();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public GUI_ModificarCeramico2() {
+		setTitle("Modificar Cerámico");
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		lblNewLabel = new JLabel("Modelo");
+		lblNewLabel.setBounds(10, 23, 68, 14);
+		contentPanel.add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("Precio (S/)");
+		lblNewLabel_1.setBounds(10, 54, 68, 14);
+		contentPanel.add(lblNewLabel_1);
+		
+		cboMode = new JComboBox();
+		cboMode.setModel(new DefaultComboBoxModel(new String[] {"Cinza Plus", "Luxury", "Austria", "Yungay Mix", "Thalía"}));
+		cboMode.setBounds(88, 19, 225, 22);
+		contentPanel.add(cboMode);
+		
+		lblNewLabel_2 = new JLabel("Ancho (cm)");
+		lblNewLabel_2.setBounds(10, 91, 68, 14);
+		contentPanel.add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("Largo (cm)");
+		lblNewLabel_3.setBounds(10, 128, 68, 14);
+		contentPanel.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("Espesor (mm)");
+		lblNewLabel_4.setBounds(10, 161, 80, 14);
+		contentPanel.add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("Contenido");
+		lblNewLabel_5.setBounds(10, 197, 80, 14);
+		contentPanel.add(lblNewLabel_5);
+		
+		txtPrecio = new JTextField();
+		txtPrecio.setBounds(88, 51, 225, 20);
+		contentPanel.add(txtPrecio);
+		txtPrecio.setColumns(10);
+		
+		txtAncho = new JTextField();
+		txtAncho.setBounds(88, 88, 225, 20);
+		contentPanel.add(txtAncho);
+		txtAncho.setColumns(10);
+		
+		txtLargo = new JTextField();
+		txtLargo.setBounds(86, 125, 227, 20);
+		contentPanel.add(txtLargo);
+		txtLargo.setColumns(10);
+		
+		txtEspe = new JTextField();
+		txtEspe.setBounds(88, 158, 225, 20);
+		contentPanel.add(txtEspe);
+		txtEspe.setColumns(10);
+		
+		txtConte = new JTextField();
+		txtConte.setBounds(87, 194, 226, 20);
+		contentPanel.add(txtConte);
+		txtConte.setColumns(10);
+		
+		btnCerrar = new JButton("Cerrar");
+		btnCerrar.setBounds(335, 19, 89, 23);
+		contentPanel.add(btnCerrar);
+		
+		btnGrabar = new JButton("Grabar");
+		btnGrabar.setBounds(335, 50, 89, 23);
+		contentPanel.add(btnGrabar);
+	}
+}

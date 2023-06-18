@@ -1,0 +1,64 @@
+package mantenimiento;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+
+public class GUI_ModificarCeramico2 extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JComboBox comboBox;
+	private JLabel lblNewLabel_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			GUI_ModificarCeramico2 dialog = new GUI_ModificarCeramico2();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public GUI_ModificarCeramico2() {
+		setTitle("Modificar Cerámico");
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		lblNewLabel = new JLabel("Modelo");
+		lblNewLabel.setBounds(10, 23, 68, 14);
+		contentPanel.add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("Precio (S/)");
+		lblNewLabel_1.setBounds(10, 54, 68, 14);
+		contentPanel.add(lblNewLabel_1);
+		
+		comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Cinza Plus", "Luxury", "Austria", "Yungay Mix", "Thalía"}));
+		comboBox.setBounds(88, 19, 152, 22);
+		contentPanel.add(comboBox);
+		
+		lblNewLabel_2 = new JLabel("Ancho (cm)");
+		lblNewLabel_2.setBounds(10, 91, 68, 14);
+		contentPanel.add(lblNewLabel_2);
+	}
+}

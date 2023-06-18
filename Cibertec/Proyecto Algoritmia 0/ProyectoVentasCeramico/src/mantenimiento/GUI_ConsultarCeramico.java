@@ -1,12 +1,6 @@
 package mantenimiento;
-
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-
 import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import java.awt.event.ActionListener;
@@ -15,6 +9,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 
 public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
+	
+	private static final long serialVersionUID = 1L;
 	private JLabel lblNewLabel;
 	private JComboBox cboMode;
 	private JLabel lblNewLabel_1;
@@ -75,11 +71,19 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	
 
 	/**
 	 * Create the dialog.
 	 */
 	public GUI_ConsultarCeramico() {
+		initialize();
+		ConsultarModelo();		
+	}
+	
+	private void initialize() {
 		setTitle("Consultar Cerámico");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
@@ -171,26 +175,25 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 				txtEspe.setText(espesor0 + "");
 				txtConte.setText(contenido0 + "");break;
 		case 1:txtPrecio.setText(precio1 + " soles");
-		txtAncho.setText(ancho1 + "");
-		txtLargo.setText(largo1 + "");
-		txtEspe.setText(espesor1 + "");
-		txtConte.setText(contenido1 + "");break;
+				txtAncho.setText(ancho1 + "");
+				txtLargo.setText(largo1 + "");
+				txtEspe.setText(espesor1 + "");
+				txtConte.setText(contenido1 + "");break;
 		case 2:txtPrecio.setText(precio2 + " soles");
-		txtAncho.setText(ancho2 + "");
-		txtLargo.setText(largo2 + "");
-		txtEspe.setText(espesor2 +"");
-		txtConte.setText(contenido2 + "");break;
+				txtAncho.setText(ancho2 + "");
+				txtLargo.setText(largo2 + "");
+				txtEspe.setText(espesor2 +"");
+				txtConte.setText(contenido2 + "");break;
 		case 3:txtPrecio.setText(precio3+ " soles");
-		txtAncho.setText(ancho3+"");
-		txtLargo.setText(largo3+"");
-		txtEspe.setText(espesor3+"");
-		txtConte.setText(contenido3+"");break;
+				txtAncho.setText(ancho3+"");
+				txtLargo.setText(largo3+"");
+				txtEspe.setText(espesor3+"");
+				txtConte.setText(contenido3+"");break;
 		case 4:txtPrecio.setText(precio4+ " soles");
-		txtAncho.setText(ancho4+"");
-		txtLargo.setText(largo4+"");
-		txtEspe.setText(espesor4+"");
-		txtConte.setText(contenido4+"");break;
-		
+				txtAncho.setText(ancho4+"");
+				txtLargo.setText(largo4+"");
+				txtEspe.setText(espesor4+"");
+				txtConte.setText(contenido4+"");break;
 		
 	}
 		
@@ -201,5 +204,6 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 	}
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
 		System.exit(0);
+		
 	}
 }

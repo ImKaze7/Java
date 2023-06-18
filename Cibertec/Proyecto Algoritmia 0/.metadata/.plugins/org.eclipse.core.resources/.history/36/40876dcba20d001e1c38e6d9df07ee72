@@ -1,0 +1,108 @@
+package configuracion;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class GUI_ConfigurarObsequios extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextField txt1;
+	private JTextField txt2;
+	private JTextField txt3;
+	private JTextField txt4;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			GUI_ConfigurarObsequios dialog = new GUI_ConfigurarObsequios();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	private void initialize() {
+		setTitle("Configurar obsequios");
+		setBounds(100, 100, 436, 149);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("Tipo de obsequio");
+			lblNewLabel.setBounds(10, 11, 95, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			txt1 = new JTextField();
+			txt1.setBounds(126, 8, 95, 20);
+			contentPanel.add(txt1);
+			txt1.setColumns(10);
+		}
+		{
+			JLabel lblNewLabel_1 = new JLabel("1 a 5 unidades");
+			lblNewLabel_1.setBounds(10, 36, 106, 14);
+			contentPanel.add(lblNewLabel_1);
+		}
+		{
+			txt2 = new JTextField();
+			txt2.setBounds(126, 33, 95, 20);
+			contentPanel.add(txt2);
+			txt2.setColumns(10);
+		}
+		{
+			JButton btnAceptar = new JButton("Aceptar");
+			btnAceptar.setBounds(319, 7, 89, 23);
+			contentPanel.add(btnAceptar);
+		}
+		{
+			JLabel lblNewLabel_2 = new JLabel("6 a 10 unidades");
+			lblNewLabel_2.setBounds(10, 58, 106, 14);
+			contentPanel.add(lblNewLabel_2);
+		}
+		{
+			JLabel lblNewLabel_3 = new JLabel("11 a más unidades");
+			lblNewLabel_3.setBounds(10, 83, 106, 14);
+			contentPanel.add(lblNewLabel_3);
+		}
+		{
+			txt3 = new JTextField();
+			txt3.setBounds(126, 55, 95, 20);
+			contentPanel.add(txt3);
+			txt3.setColumns(10);
+		}
+		{
+			txt4 = new JTextField();
+			txt4.setBounds(126, 80, 95, 20);
+			contentPanel.add(txt4);
+			txt4.setColumns(10);
+		}
+		{
+			JButton btnNewButton = new JButton("Cancelar");
+			btnNewButton.setBounds(319, 32, 89, 23);
+			contentPanel.add(btnNewButton);
+		}	}
+	public GUI_ConfigurarObsequios() {
+		initialize();
+		
+	}
+	void CrearDatos() {
+	txt1.setText(Double.toString(porcentaje1));
+	txt2.setText(Double.toString(porcentaje2));
+	txt3.setText(Double.toString(porcentaje3));
+	txt4.setText(Double.toString(porcentaje4));
+	}
+}

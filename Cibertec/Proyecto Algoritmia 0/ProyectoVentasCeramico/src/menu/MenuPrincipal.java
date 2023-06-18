@@ -1,15 +1,14 @@
 package menu;
 
-import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+
 
 import mantenimiento.GUI_ConsultarCeramico;
-import proyecto.GUI_Vender;
 import mantenimiento.GUI_ModificarCeramico;
+import vender.GUI_Vender;
 import mantenimiento.GUI_ListarCeramico;
 
 import javax.swing.JMenuBar;
@@ -18,7 +17,10 @@ import javax.swing.JMenu;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
 public class MenuPrincipal extends JFrame implements ActionListener {
+	
+	private static final long serialVersionUID = 1L;
 	public static String modelo0 ="Cinza Plus";
 	public static double precio0 = 92.56;
 	public static double ancho0 = 62.00;
@@ -53,6 +55,20 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 	public static double largo4 = 11.8;
 	public static double espesor4 = 7.2;
 	public static int contenido4 = 10;
+	// Porcentajes de descuento
+	public static double porcentaje1 = 7.5;
+	public static double porcentaje2 = 10.0;
+	public static double porcentaje3 = 12.5;
+	public static double porcentaje4 = 15.0;
+	// Obsequio
+	public static String tipoObsequio = "Lapicero";
+	public static int obsequioCantidad1 = 2;
+	public static int obsequioCantidad2 = 3;
+	public static int obsequioCantidad3 = 4;
+	// Cantidad óptima de unidades vendidas por día
+	public static int cantidadOptima = 10;
+	// Cuota diaria
+	public static double cuotaDiaria = 30000;
 	private JMenuBar menuBar;
 	private JMenu mnNewMenu;
 	private JMenuItem mntmNewMenuItem;
@@ -68,6 +84,8 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 	private JMenuItem mntmNewMenuItem_7;
 	private JMenuItem mntmNewMenuItem_8;
 	private JMenuItem mntmNewMenuItem_9;
+	private JMenu mnNewMenu_4;
+	private JMenuItem mntmNewMenuItem_1;
 
 	/**
 	 * Launch the application.
@@ -143,6 +161,12 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		
 		mntmNewMenuItem_9 = new JMenuItem("Configurar cuota diaria");
 		mnNewMenu_3.add(mntmNewMenuItem_9);
+		
+		mnNewMenu_4 = new JMenu("Ayuda");
+		menuBar.add(mnNewMenu_4);
+		
+		mntmNewMenuItem_1 = new JMenuItem("Acerca de Tienda");
+		mnNewMenu_4.add(mntmNewMenuItem_1);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
