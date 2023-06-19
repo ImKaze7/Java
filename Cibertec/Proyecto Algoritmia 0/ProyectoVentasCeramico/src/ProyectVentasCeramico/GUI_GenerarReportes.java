@@ -40,56 +40,35 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 	String compara3;
 	String compara4;
 	
+	public static double precio1;
+	public static double precio2;
+	public static double precio3;
+	public static double precio4;
+	public static double precio5;
 
+    double menorPrecio;
+    double mayorPrecio;
+	
 
+	public static double menorPrecio1;
+	public static double mayorPrecio2;
 
 	private static final long serialVersionUID = 1L;
 	public static String modelo0 ="Cinza Plus";
-	public static double precio0 = 92.56;
-	public static double ancho0 = 62.00;
-	public static double largo0 = 62.00;
-	public static double espesor0 = 8;
-	public static int contenido0 = 6;
+	
 	
 	public static String modelo1 = "Luxury";
-	public static double precio1 = 42.77;
-	public static double ancho1 = 60;
-	public static double largo1 = 60;
-	public static double espesor1 = 8.5;
-	public static int contenido1 = 6;
+	
 	
 	public static String modelo2 = "Austria";
-	public static double precio2 = 52.45;
-	public static double ancho2 = 45;
-	public static double largo2 = 45;
-	public static double espesor2 = 6.5;
-	public static int contenido2 = 12;
+	
 	
 	public static String modelo3 = "Yungay Mix";
-	public static double precio3 = 55.89;
-	public static double ancho3 = 80;
-	public static double largo3 = 120;
-	public static double espesor3 = 6.8;
-	public static int contenido3 = 9;
 	
 	public static String modelo4 = "Thalía";
-	public static double precio4 = 45;
-	public static double ancho4 = 45;
-	public static double largo4 = 11.8;
-	public static double espesor4 = 7.2;
-	public static int contenido4 = 10;
-	public static double porcentaje1 = 7.5;
-	public static double porcentaje2 = 10.0;
-	public static double porcentaje3 = 12.5;
-	public static double porcentaje4 = 15.0;
+	
 	// Obsequio
 	public static String tipoObsequio = "Lapicero";
-	public static int obsequioCantidad1 = 2;
-	public static int obsequioCantidad2 = 3;
-	public static int obsequioCantidad3 = 4;
-	public static int cantidadOptima = 10;
-	// Cuota diaria
-	public static double cuotaDiaria = 30000;//100%
 	private final JPanel contentPanel = new JPanel();
 	private JButton btnCerrar;
 	private JScrollPane scrollPane;
@@ -157,16 +136,51 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
 		dispose();
 	}
-	protected void actionPerformedComboBox(ActionEvent e) {		
-		compa = Double.parseDouble(R2.getPrecio_0())-R1.getPromedio();
-		compa1 = Double.parseDouble(R2.getPrecio_1())-R1.getPromedio();
-		compa2 = Double.parseDouble(R2.getPrecio_2())-R1.getPromedio();
-		compa3 = Double.parseDouble(R2.getPrecio_3())-R1.getPromedio();
-		double c=Math.abs(compa = Double.parseDouble(R2.getPrecio_0())-R1.getPromedio());
-		double c1=Math.abs(compa1 = Double.parseDouble(R2.getPrecio_1())-R1.getPromedio());
-		double c2=Math.abs(compa2 = Double.parseDouble(R2.getPrecio_2())-R1.getPromedio());
-		double c3=Math.abs(compa3 = Double.parseDouble(R2.getPrecio_3())-R1.getPromedio());
-		double c4=Math.abs(compa4 = Double.parseDouble(R2.getPrecio_4())-R1.getPromedio());
+	
+	void condicional() {
+			precio1 = R2.getPrecio_0();
+			precio2 = R2.getPrecio_1();
+			precio3 = R2.getPrecio_2();
+			precio4 = R2.getPrecio_3();
+			precio5 = R2.getPrecio_4();
+
+	        // Comparación para encontrar el menor precio
+	        if (precio1 <= precio2 && precio1 <= precio3 && precio1 <= precio4 && precio1 <= precio5) {
+	            menorPrecio = precio1;
+	        } else if (precio2 <= precio1 && precio2 <= precio3 && precio2 <= precio4 && precio2 <= precio5) {
+	            menorPrecio = precio2;
+	        } else if (precio3 <= precio1 && precio3 <= precio2 && precio3 <= precio4 && precio3 <= precio5) {
+	            menorPrecio = precio3;
+	        } else if (precio4 <= precio1 && precio4 <= precio2 && precio4 <= precio3 && precio4 <= precio5) {
+	            menorPrecio = precio4;
+	        } else {
+	            menorPrecio = precio5;
+	        }
+
+	        // Comparación para encontrar el mayor precio
+	        if (precio1 >= precio2 && precio1 >= precio3 && precio1 >= precio4 && precio1 >= precio5) {
+	            mayorPrecio = precio1;
+	        } else if (precio2 >= precio1 && precio2 >= precio3 && precio2 >= precio4 && precio2 >= precio5) {
+	            mayorPrecio = precio2;
+	        } else if (precio3 >= precio1 && precio3 >= precio2 && precio3 >= precio4 && precio3 >= precio5) {
+	            mayorPrecio = precio3;
+	        } else if (precio4 >= precio1 && precio4 >= precio2 && precio4 >= precio3 && precio4 >= precio5) {
+	            mayorPrecio = precio4;
+	        } else {
+	            mayorPrecio = precio5;
+	        }
+	}
+	protected void actionPerformedComboBox(ActionEvent e) {	
+		condicional();
+		compa = R2.getPrecio_0()-R1.getPromedio();
+		compa1 = R2.getPrecio_1()-R1.getPromedio();
+		compa2 = R2.getPrecio_2()-R1.getPromedio();
+		compa3 = R2.getPrecio_3()-R1.getPromedio();
+		double c=Math.abs(compa = R2.getPrecio_0()-R1.getPromedio());
+		double c1=Math.abs(compa1 = R2.getPrecio_1()-R1.getPromedio());
+		double c2=Math.abs(compa2 = R2.getPrecio_2()-R1.getPromedio());
+		double c3=Math.abs(compa3 = R2.getPrecio_3()-R1.getPromedio());
+		double c4=Math.abs(compa4 = R2.getPrecio_4()-R1.getPromedio());
 		
 		double cc=Math.abs(compa = R1.getCanti()-R3.getCantidadOptima());
 		double cc1=Math.abs(compa1 = R1.getCanti1()-R3.getCantidadOptima());
@@ -174,29 +188,29 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 		double cc3=Math.abs(compa3 = R1.getCanti3()-R3.getCantidadOptima());
 		double cc4=Math.abs(compa4 = R1.getCanti4()-R3.getCantidadOptima());
 
-		if(Double.parseDouble(R2.getPrecio_0()) > R1.getPromedio()) {
+		if(R2.getPrecio_0() > R1.getPromedio()) {
 	comparacion = "más que el promedio";}
-	else if (Double.parseDouble(R2.getPrecio_0()) < R1.getPromedio()) {
+	else if (R2.getPrecio_0() < R1.getPromedio()) {
 			comparacion = "menos que el promedio";
 			}
-		if(Double.parseDouble(R2.getPrecio_1()) > R1.getPromedio()) {
+		if(R2.getPrecio_1() > R1.getPromedio()) {
 			comparacion1 = "más que el promedio";}
-			else if (Double.parseDouble(R2.getPrecio_1()) < R1.getPromedio()) {
+			else if (R2.getPrecio_1() < R1.getPromedio()) {
 					comparacion1 = "menos que el promedio";
 					}
-		if(Double.parseDouble(R2.getPrecio_2()) > R1.getPromedio()) {
+		if(R2.getPrecio_2() > R1.getPromedio()) {
 			comparacion2 = "más que el promedio";}
-			else if (Double.parseDouble(R2.getPrecio_2()) < R1.getPromedio()) {
+			else if (R2.getPrecio_2() <R1.getPromedio()) {
 					comparacion2 = "menos que el promedio";
 					}
-		if(Double.parseDouble(R2.getPrecio_3()) > R1.getPromedio()) {
+		if(R2.getPrecio_3() > R1.getPromedio()) {
 			comparacion3 = "más que el promedio";}
-			else if (Double.parseDouble(R2.getPrecio_3()) < R1.getPromedio()) {
+			else if (R2.getPrecio_3() < R1.getPromedio()) {
 					comparacion3 = "menos que el promedio";
 					}
-		if(Double.parseDouble(R2.getPrecio_4()) > R1.getPromedio()) {
+		if(R2.getPrecio_4() > R1.getPromedio()) {
 			comparacion4 = "más que el promedio";}
-			else if (Double.parseDouble(R2.getPrecio_4()) < R1.getPromedio()) {
+			else if (R2.getPrecio_4() < R1.getPromedio()) {
 					comparacion4 = "menos que el promedio";
 					}
 		
@@ -234,9 +248,12 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 		if(R1.getCanti4() < R3.getCantidadOptima()) {
 			compara4 = "menos que el promedio";}
 			else if (R1.getCanti4() == R3.getCantidadOptima()) {
-						compara4 = "igual que la cantidad óptima";}
+						compara4 = "igual que la cantidad óptima";}		
+		 
 
-					
+       
+		
+		
 		int report;
 		report = cboReport.getSelectedIndex();
 		
@@ -336,9 +353,9 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 				);break;
 		default: txtS.setText("ESTADÍSTICA SOBRE EL PRECIO"+ "\n" +
 				"" + "\n" +
-				"Precio promedio : " + "" + "\n" +
-				"Precio mayor : " + "" + "\n" +
-				"Precio menor : " + "" + "\n" 
+				"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+				"Precio mayor : " + mayorPrecio + "\n" +
+				"Precio menor : " + menorPrecio + "\n" 
 				);
 		}
 	}

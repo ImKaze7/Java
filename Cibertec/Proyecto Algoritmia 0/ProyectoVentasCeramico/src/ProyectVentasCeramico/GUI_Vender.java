@@ -218,6 +218,7 @@ double tot1, tot2, tot3, tot4, tot5;
 	private static int canti3 = 0;
 	private static int canti4 = 0;
 
+	
 	private static double promedio = 0.0;
 	public static double getPromedio() {
 		return promedio;
@@ -346,6 +347,7 @@ double tot1, tot2, tot3, tot4, tot5;
 
 	void VenderCeramico() {
 		
+		
 		String modelo;
 		int  mode;
 		double ip,des=0.0,obs=0.0,precio, suma=0;
@@ -353,7 +355,7 @@ double tot1, tot2, tot3, tot4, tot5;
 		mode = cboMode.getSelectedIndex();
 
 		precio= Double.parseDouble(txtPrecio.getText());
-		promedio = (precio1 + precio2 + precio3 + precio4 +precio)/5;
+		promedio=(aaa.getPrecio_0()+aaa.getPrecio_1()+aaa.getPrecio_2()+aaa.getPrecio_3()+aaa.getPrecio_4())/5;
 		
 		
 		switch(mode) {
@@ -578,11 +580,11 @@ double tot1, tot2, tot3, tot4, tot5;
 		mode = cboMode.getSelectedIndex();
 
 		switch(mode) {
-		case 0: txtPrecio.setText(aaa.getPrecio_0());break;
-		case 1: txtPrecio.setText(aaa.getPrecio_1());break;
-		case 2: txtPrecio.setText(aaa.getPrecio_2());break;
-		case 3: txtPrecio.setText(aaa.getPrecio_3());break;
-		default: txtPrecio.setText(aaa.getPrecio_4());
+		case 0: txtPrecio.setText(Double.toString(aaa.getPrecio_0()));break;
+		case 1: txtPrecio.setText(Double.toString(aaa.getPrecio_1()));break;
+		case 2: txtPrecio.setText(Double.toString(aaa.getPrecio_2()));break;
+		case 3: txtPrecio.setText(Double.toString(aaa.getPrecio_3()));break;
+		default: txtPrecio.setText(Double.toString(aaa.getPrecio_4()));
 
 		}
 

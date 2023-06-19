@@ -31,6 +31,8 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 	private JTextField txtConte;
 	private JButton btnCerrar;
 	private JButton btnGrabar;	
+	
+	private static double prom;
 	private static final long serialVersionUID = 1L;
 	public static String modelo0 ="Cinza Plus";
 	public static double precio0 = 92.56;
@@ -206,13 +208,23 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 			txtConte.setText(Integer.toString(contenido4));
 	}
 	
+	
+	
 }
 	
 	protected void actionPerformedCboMode(ActionEvent e) {
 		ConsultarModelo();
 	}
+	
+	
+	public static double getProm() {
+		return prom;
+	}
+	
+
 	protected void actionPerformedBtnGrabar(ActionEvent e) {
-		//GUI_ListarCeramico aa = new GUI_ListarCeramico();		
+		//GUI_ListarCeramico aa = new GUI_ListarCeramico();
+		
 		
 		int mode;
 		mode = cboMode.getSelectedIndex();
@@ -245,43 +257,42 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 	 	       contenido4 = Integer.parseInt(txtConte.getText());
 	 	      
 		}
+		prom=(precio0+precio1+precio2+precio3+precio4)/5;
 		dispose();
 	}
-	private String Precio_0 = Double.toString(precio0);
+	private double Precio_0 = precio0;
 	private String Ancho_0 = Double.toString(ancho0);
 	private String Largo_0 = Double.toString(largo0);
 	private String Espesor_0 = Double.toString(espesor0);
 	private String Contenido_0= Integer.toString(contenido0);
 	
-	private String Precio_1 = Double.toString(precio1);
+	private double Precio_1 = precio1;
 	private String Ancho_1 = Double.toString(ancho1);
 	private String Largo_1 = Double.toString(largo1);
 	private String Espesor_1 = Double.toString(espesor1);
 	private String Contenido_1= Integer.toString(contenido1);
 	
-	private String Precio_2 = Double.toString(precio2);
+	private double Precio_2 = precio2;
 	private String Ancho_2 = Double.toString(ancho2);
 	private String Largo_2 = Double.toString(largo2);
 	private String Espesor_2 = Double.toString(espesor2);
 	private String Contenido_2= Integer.toString(contenido2);
 	
 	
-	private String Precio_3 = Double.toString(precio3);
+	private double Precio_3 = precio3;
 	private String Ancho_3 = Double.toString(ancho3);
 	private String Largo_3 = Double.toString(largo3);
 	private String Espesor_3 = Double.toString(espesor3);
 	private String Contenido_3= Integer.toString(contenido3);
 	
-	private String Precio_4 = Double.toString(precio4);
+	private double Precio_4 = precio4;
 	private String Ancho_4 = Double.toString(ancho4);
 	private String Largo_4 = Double.toString(largo4);
 	private String Espesor_4 = Double.toString(espesor4);
 	private String Contenido_4= Integer.toString(contenido4);
 	
 	
-	public String getPrecio_4() {
-		return Precio_4;
-	}
+	
 
 	public String getAncho_4() {
 		return Ancho_4;
@@ -298,10 +309,6 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 	
 
 	
-
-	public String getPrecio_3() {
-		return Precio_3;
-	}
 
 	public String getAncho_3() {
 		return Ancho_3;
@@ -320,10 +327,6 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 	
 	
 	
-
-	public String getPrecio_2() {
-		return Precio_2;
-	}
 
 	
 
@@ -359,10 +362,6 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 	}
 
 
-	
-	public String getPrecio_1() {
-		return Precio_1;
-	}
 
 	
 
@@ -411,13 +410,35 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		return Ancho_0;
 	}	
 
-	public String getPrecio_0() {
-		return Precio_0;		
+	
+	
+	public double getPrecio_0() {
+		return Precio_0;
 	}
+
 	
+
+	public double getPrecio_1() {
+		return Precio_1;
+	}
+
 	
+
+	public double getPrecio_2() {
+		return Precio_2;
+	}
+
 	
-	
+
+	public double getPrecio_3() {
+		return Precio_3;
+	}
+
+
+	public double getPrecio_4() {
+		return Precio_4;
+	}
+
 	
 	protected void actionPerformedBtnCerrar(ActionEvent e) {
 		dispose();

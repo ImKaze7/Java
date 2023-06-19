@@ -13124,3 +13124,1081 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-06-19 16:27:21.778
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:590)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:267)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:347)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:368)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:284)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:199)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:192)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:462)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:182)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:148)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:147)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:604)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:468)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4785)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:464)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:484)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:432)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:389)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:275)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:252)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:127)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:332)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-19 16:40:05.677
+!MESSAGE Could not retrieve declared methods
+!STACK 0
+java.lang.NullPointerException: Cannot store to object array because "this.types[this.typeid]" is null
+	at org.eclipse.jdt.internal.compiler.lookup.TypeSystem.getArrayType(TypeSystem.java:307)
+	at org.eclipse.jdt.internal.compiler.lookup.AnnotatableTypeSystem.getArrayType(AnnotatableTypeSystem.java:95)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getTypeFromSignature(LookupEnvironment.java:1916)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.createFields(BinaryTypeBinding.java:869)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.cachePartsFrom(BinaryTypeBinding.java:617)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:1058)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:1039)
+	at org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:308)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:260)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:116)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:251)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.enclosingType(BinaryTypeBinding.java:1306)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.<init>(BinaryTypeBinding.java:339)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.<init>(BinaryTypeBinding.java:290)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:1045)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:1039)
+	at org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:308)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:260)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:116)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:251)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveTypesFor(BinaryTypeBinding.java:1933)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.availableMethods(BinaryTypeBinding.java:438)
+	at org.eclipse.jdt.core.dom.TypeBinding.getDeclaredMethods(TypeBinding.java:293)
+	at org.eclipse.jdt.internal.corext.dom.ScopeAnalyzer.addInherited(ScopeAnalyzer.java:222)
+	at org.eclipse.jdt.internal.corext.dom.ScopeAnalyzer.addInherited(ScopeAnalyzer.java:206)
+	at org.eclipse.jdt.internal.corext.dom.ScopeAnalyzer.getDeclarationsInScope(ScopeAnalyzer.java:401)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getMethodProposals(UnresolvedElementsSubProcessor.java:1321)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:398)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:361)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-06-19 16:52:00.705
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:590)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:267)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:347)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:368)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:284)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:199)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:192)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:462)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:182)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:148)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:147)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:604)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:468)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4785)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:464)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:484)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:432)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:389)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:275)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:252)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:127)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:332)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-19 17:04:13.538
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ProyectVentasCeramico;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+
+public class GUI_GenerarReportes extends JDialog implements ActionListener {
+	GUI_Vender R1 = new GUI_Vender();
+	GUI_ModificarCeramico R2 = new GUI_ModificarCeramico();
+	GUI_ConfigurarCantidadOptima R3 = new GUI_ConfigurarCantidadOptima();
+	DecimalFormat df = new DecimalFormat("0.00");
+	
+	///Variables
+	public static double compa; 
+	public static double compa1; 
+	public static double compa2; 
+	public static double compa3; 
+	public static double compa4;	
+	String comparacion;
+	String comparacion1;
+	String comparacion2;
+	String comparacion3;
+	String comparacion4;
+	
+	String compara;
+	String compara1;
+	String compara2;
+	String compara3;
+	String compara4;
+	
+
+
+
+	private static final long serialVersionUID = 1L;
+	public static String modelo0 ="Cinza Plus";
+	
+	
+	public static String modelo1 = "Luxury";
+	
+	
+	public static String modelo2 = "Austria";
+	
+	
+	public static String modelo3 = "Yungay Mix";
+	
+	public static String modelo4 = "Thalía";
+	
+	// Obsequio
+	public static String tipoObsequio = "Lapicero";
+	private final JPanel contentPanel = new JPanel();
+	private JButton btnCerrar;
+	private JScrollPane scrollPane;
+	private JTextArea txtS;
+	private JComboBox cboReport;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			GUI_GenerarReportes dialog = new GUI_GenerarReportes();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public GUI_GenerarReportes() {
+		setBounds(100, 100, 747, 448);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("Tipo de reporte");
+			lblNewLabel.setBounds(10, 24, 105, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			cboReport = new JComboBox();
+			cboReport.addActionListener(this);
+			cboReport.setModel(new DefaultComboBoxModel(new String[] {"Ventas por modelo", "Comparación de precios con el precio promedio", "Comparación de cajas vendidas con la cantidad óptima", "Estadística sobre el precio"}));
+			cboReport.setBounds(125, 20, 390, 22);
+			contentPanel.add(cboReport);
+		}
+		{
+			btnCerrar = new JButton("Cerrar");
+			btnCerrar.addActionListener(this);
+			btnCerrar.setBounds(588, 20, 89, 23);
+			contentPanel.add(btnCerrar);
+		}
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 63, 711, 335);
+		contentPanel.add(scrollPane);
+		
+		txtS = new JTextArea();
+		txtS.setEditable(false);
+		scrollPane.setViewportView(txtS);
+	}
+	//JOptionPane.showMessageDialog(null)
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == cboReport) {
+			actionPerformedComboBox(e);
+		}
+		if (e.getSource() == btnCerrar) {
+			actionPerformedBtnNewButton(e);
+		}
+	}
+	protected void actionPerformedBtnNewButton(ActionEvent e) {
+		dispose();
+	}
+	protected void actionPerformedComboBox(ActionEvent e) {		
+		compa = R2.getPrecio_0()-R1.getPromedio();
+		compa1 = R2.getPrecio_1()-R1.getPromedio();
+		compa2 = R2.getPrecio_2()-R1.getPromedio();
+		compa3 = R2.getPrecio_3()-R1.getPromedio();
+		double c=Math.abs(compa = R2.getPrecio_0()-R1.getPromedio());
+		double c1=Math.abs(compa1 = R2.getPrecio_1()-R1.getPromedio());
+		double c2=Math.abs(compa2 = R2.getPrecio_2()-R1.getPromedio());
+		double c3=Math.abs(compa3 = R2.getPrecio_3()-R1.getPromedio());
+		double c4=Math.abs(compa4 = R2.getPrecio_4()-R1.getPromedio());
+		
+		double cc=Math.abs(compa = R1.getCanti()-R3.getCantidadOptima());
+		double cc1=Math.abs(compa1 = R1.getCanti1()-R3.getCantidadOptima());
+		double cc2=Math.abs(compa2 = R1.getCanti2()-R3.getCantidadOptima());
+		double cc3=Math.abs(compa3 = R1.getCanti3()-R3.getCantidadOptima());
+		double cc4=Math.abs(compa4 = R1.getCanti4()-R3.getCantidadOptima());
+
+		if(R2.getPrecio_0() > R1.getPromedio()) {
+	comparacion = "más que el promedio";}
+	else if (R2.getPrecio_0() < R1.getPromedio()) {
+			comparacion = "menos que el promedio";
+			}
+		if(R2.getPrecio_1() > R1.getPromedio()) {
+			comparacion1 = "más que el promedio";}
+			else if (R2.getPrecio_1() < R1.getPromedio()) {
+					comparacion1 = "menos que el promedio";
+					}
+		if(R2.getPrecio_2() > R1.getPromedio()) {
+			comparacion2 = "más que el promedio";}
+			else if (R2.getPrecio_2() <R1.getPromedio()) {
+					comparacion2 = "menos que el promedio";
+					}
+		if(R2.getPrecio_3() > R1.getPromedio()) {
+			comparacion3 = "más que el promedio";}
+			else if (R2.getPrecio_3() < R1.getPromedio()) {
+					comparacion3 = "menos que el promedio";
+					}
+		if(R2.getPrecio_4() > R1.getPromedio()) {
+			comparacion4 = "más que el promedio";}
+			else if (R2.getPrecio_4() < R1.getPromedio()) {
+					comparacion4 = "menos que el promedio";
+					}
+		
+		
+		if(R1.getCanti() > R3.getCantidadOptima()) {
+			compara = "más que la cantidad óptima";}
+		if(R1.getCanti() < R3.getCantidadOptima()) {
+			compara = "menos que el promedio";}
+			else if (R1.getCanti() == R3.getCantidadOptima()) {
+						compara = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti1() > R3.getCantidadOptima()) {
+			compara1 = "más que la cantidad óptima";}
+		if(R1.getCanti1() < R3.getCantidadOptima()) {
+			compara1 = "menos que el promedio";}
+			else if (R1.getCanti1() == R3.getCantidadOptima()) {
+						compara1 = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti2() > R3.getCantidadOptima()) {
+			compara2 = "más que la cantidad óptima";}
+		if(R1.getCanti2() < R3.getCantidadOptima()) {
+			compara2 = "menos que el promedio";}
+			else if (R1.getCanti2() == R3.getCantidadOptima()) {
+						compara2 = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti3() > R3.getCantidadOptima()) {
+			compara3 = "más que la cantidad óptima";}
+		if(R1.getCanti3() < R3.getCantidadOptima()) {
+			compara3 = "menos que el promedio";}
+			else if (R1.getCanti3() == R3.getCantidadOptima()) {
+						compara3 = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti4() > R3.getCantidadOptima()) {
+			compara4 = "más que la cantidad óptima";}
+		if(R1.getCanti4() < R3.getCantidadOptima()) {
+			compara4 = "menos que el promedio";}
+			else if (R1.getCanti4() == R3.getCantidadOptima()) {
+						compara4 = "igual que la cantidad óptima";}
+
+		//Buscar Mayor y menos precio
+		if (R1.getPrecio0() <= R1.getPrecio1() && R1.getPrecio0() <= R1.getPrecio2() && R1.getPrecio0() <= R1.getPrecio3() && R1.getPrecio0() <= R1.getPrecio4()) {
+            menorPrecio = R1.getPrecio0();
+        } else if (escribe un programa donde haya 5 precios fijos sin usar for, solo if para buscar el mayor y menor precio. <= precio1 && precio2 <= precio3 && precio2 <= precio4 && precio2 <= precio5) {
+            menorPrecio = precio2;
+        } else if (precio3 <= precio1 && precio3 <= precio2 && precio3 <= precio4 && precio3 <= precio5) {
+            menorPrecio = precio3;
+        } else if (precio4 <= precio1 && precio4 <= precio2 && precio4 <= precio3 && precio4 <= precio5) {
+            menorPrecio = precio4;
+        } else {
+            menorPrecio = precio5;
+        }
+
+        // Comparación para encontrar el mayor precio
+        if (precio1 >= precio2 && precio1 >= precio3 && precio1 >= precio4 && precio1 >= precio5) {
+            mayorPrecio = precio1;
+        } else if (precio2 >= precio1 && precio2 >= precio3 && precio2 >= precio4 && precio2 >= precio5) {
+            mayorPrecio = precio2;
+        } else if (precio3 >= precio1 && precio3 >= precio2 && precio3 >= precio4 && precio3 >= precio5) {
+            mayorPrecio = precio3;
+        } else if (precio4 >= precio1 && precio4 >= precio2 && precio4 >= precio3 && precio4 >= precio5) {
+            mayorPrecio = precio4;
+        } else {
+            mayorPrecio = precio5;
+        }
+		
+		
+		int report;
+		report = cboReport.getSelectedIndex();
+		
+		switch(report) {
+		case 0: txtS.setText("VENTAS POR MODELO" + "\n" +
+							"" +  "\n" +
+							"Modelo : " + modelo0+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti() + "\n" +
+							"Importe total vendido : " + R1.getIc() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp()) + "%"+ "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo1+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta1()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti1() + "\n" +
+
+							"Importe total vendido : " + R1.getIc1() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp1())+ "%" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo2+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta2()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti2() + "\n" +
+
+							"Importe total vendido : " + R1.getIc2() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp2())+ "%" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo3+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta3()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti3() + "\n" +
+
+							"Importe total vendido : " + R1.getIc3() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp3())+ "%" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo4+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta4()  + "\n" +
+							"Cantidad de cajas vendidas : " +  df.format(R1.getCanti4()) + "\n" +
+
+							"Importe total vendido : " + R1.getIc4() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp())+ "%" + "\n"+
+							"" + "\n" 
+							);break;
+		case 1: txtS.setText("COMPARACIÓN DE PRECIOS CON EL PRECIO PROMEDIO" + "\n" +
+							"" + "\n" +
+							"Modelo : " + modelo0 + "\n" +
+							"Precio : " + R2.getPrecio_0() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c) +" "+ comparacion +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo1 + "\n" +
+							"Precio : " + R2.getPrecio_1() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c1)+ " "+comparacion1 +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo2 + "\n" +
+							"Precio : " + R2.getPrecio_2() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c2) +" "+ comparacion2+"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo3 + "\n" +
+							"Precio : " + R2.getPrecio_3() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c3)+ " "+comparacion3 +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo4 + "\n" +
+							"Precio : " + R2.getPrecio_4() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c4) +" "+ comparacion4+"\n" +
+							"" + "\n" 
+							);break;
+		case 2:txtS.setText("COMPARACIÓN DE CAJAS VENDIDAS CON LA CANTIDAD ÓPTIMA"+ "\n" +
+				"" + "\n" +
+				"Modelo : " + modelo0 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc +" "+ compara +"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo1 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti1() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc1+" "+compara1 +"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo2 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti2() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc2+" "+compara2 +"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo3 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti3() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc3 +" "+compara3+"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo4 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti4() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc4+" " +compara4+"\n" +
+				"" + "\n" 
+				);break;
+		default: txtS.setText("ESTADÍSTICA SOBRE EL PRECIO"+ "\n" +
+				"" + "\n" +
+				"Precio promedio : " + R1.getPromedio() + "\n" +
+				"Precio mayor : " + "" + "\n" +
+				"Precio menor : " + "" + "\n" 
+				);
+		}
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2023-06-19 17:04:13.538
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2023-06-19 17:04:13.539
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-19 17:04:13.597
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ProyectVentasCeramico;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+
+public class GUI_GenerarReportes extends JDialog implements ActionListener {
+	GUI_Vender R1 = new GUI_Vender();
+	GUI_ModificarCeramico R2 = new GUI_ModificarCeramico();
+	GUI_ConfigurarCantidadOptima R3 = new GUI_ConfigurarCantidadOptima();
+	DecimalFormat df = new DecimalFormat("0.00");
+	
+	///Variables
+	public static double compa; 
+	public static double compa1; 
+	public static double compa2; 
+	public static double compa3; 
+	public static double compa4;	
+	String comparacion;
+	String comparacion1;
+	String comparacion2;
+	String comparacion3;
+	String comparacion4;
+	
+	String compara;
+	String compara1;
+	String compara2;
+	String compara3;
+	String compara4;
+	
+
+
+
+	private static final long serialVersionUID = 1L;
+	public static String modelo0 ="Cinza Plus";
+	
+	
+	public static String modelo1 = "Luxury";
+	
+	
+	public static String modelo2 = "Austria";
+	
+	
+	public static String modelo3 = "Yungay Mix";
+	
+	public static String modelo4 = "Thalía";
+	
+	// Obsequio
+	public static String tipoObsequio = "Lapicero";
+	private final JPanel contentPanel = new JPanel();
+	private JButton btnCerrar;
+	private JScrollPane scrollPane;
+	private JTextArea txtS;
+	private JComboBox cboReport;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			GUI_GenerarReportes dialog = new GUI_GenerarReportes();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public GUI_GenerarReportes() {
+		setBounds(100, 100, 747, 448);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("Tipo de reporte");
+			lblNewLabel.setBounds(10, 24, 105, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			cboReport = new JComboBox();
+			cboReport.addActionListener(this);
+			cboReport.setModel(new DefaultComboBoxModel(new String[] {"Ventas por modelo", "Comparación de precios con el precio promedio", "Comparación de cajas vendidas con la cantidad óptima", "Estadística sobre el precio"}));
+			cboReport.setBounds(125, 20, 390, 22);
+			contentPanel.add(cboReport);
+		}
+		{
+			btnCerrar = new JButton("Cerrar");
+			btnCerrar.addActionListener(this);
+			btnCerrar.setBounds(588, 20, 89, 23);
+			contentPanel.add(btnCerrar);
+		}
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 63, 711, 335);
+		contentPanel.add(scrollPane);
+		
+		txtS = new JTextArea();
+		txtS.setEditable(false);
+		scrollPane.setViewportView(txtS);
+	}
+	//JOptionPane.showMessageDialog(null)
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == cboReport) {
+			actionPerformedComboBox(e);
+		}
+		if (e.getSource() == btnCerrar) {
+			actionPerformedBtnNewButton(e);
+		}
+	}
+	protected void actionPerformedBtnNewButton(ActionEvent e) {
+		dispose();
+	}
+	protected void actionPerformedComboBox(ActionEvent e) {		
+		compa = R2.getPrecio_0()-R1.getPromedio();
+		compa1 = R2.getPrecio_1()-R1.getPromedio();
+		compa2 = R2.getPrecio_2()-R1.getPromedio();
+		compa3 = R2.getPrecio_3()-R1.getPromedio();
+		double c=Math.abs(compa = R2.getPrecio_0()-R1.getPromedio());
+		double c1=Math.abs(compa1 = R2.getPrecio_1()-R1.getPromedio());
+		double c2=Math.abs(compa2 = R2.getPrecio_2()-R1.getPromedio());
+		double c3=Math.abs(compa3 = R2.getPrecio_3()-R1.getPromedio());
+		double c4=Math.abs(compa4 = R2.getPrecio_4()-R1.getPromedio());
+		
+		double cc=Math.abs(compa = R1.getCanti()-R3.getCantidadOptima());
+		double cc1=Math.abs(compa1 = R1.getCanti1()-R3.getCantidadOptima());
+		double cc2=Math.abs(compa2 = R1.getCanti2()-R3.getCantidadOptima());
+		double cc3=Math.abs(compa3 = R1.getCanti3()-R3.getCantidadOptima());
+		double cc4=Math.abs(compa4 = R1.getCanti4()-R3.getCantidadOptima());
+
+		if(R2.getPrecio_0() > R1.getPromedio()) {
+	comparacion = "más que el promedio";}
+	else if (R2.getPrecio_0() < R1.getPromedio()) {
+			comparacion = "menos que el promedio";
+			}
+		if(R2.getPrecio_1() > R1.getPromedio()) {
+			comparacion1 = "más que el promedio";}
+			else if (R2.getPrecio_1() < R1.getPromedio()) {
+					comparacion1 = "menos que el promedio";
+					}
+		if(R2.getPrecio_2() > R1.getPromedio()) {
+			comparacion2 = "más que el promedio";}
+			else if (R2.getPrecio_2() <R1.getPromedio()) {
+					comparacion2 = "menos que el promedio";
+					}
+		if(R2.getPrecio_3() > R1.getPromedio()) {
+			comparacion3 = "más que el promedio";}
+			else if (R2.getPrecio_3() < R1.getPromedio()) {
+					comparacion3 = "menos que el promedio";
+					}
+		if(R2.getPrecio_4() > R1.getPromedio()) {
+			comparacion4 = "más que el promedio";}
+			else if (R2.getPrecio_4() < R1.getPromedio()) {
+					comparacion4 = "menos que el promedio";
+					}
+		
+		
+		if(R1.getCanti() > R3.getCantidadOptima()) {
+			compara = "más que la cantidad óptima";}
+		if(R1.getCanti() < R3.getCantidadOptima()) {
+			compara = "menos que el promedio";}
+			else if (R1.getCanti() == R3.getCantidadOptima()) {
+						compara = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti1() > R3.getCantidadOptima()) {
+			compara1 = "más que la cantidad óptima";}
+		if(R1.getCanti1() < R3.getCantidadOptima()) {
+			compara1 = "menos que el promedio";}
+			else if (R1.getCanti1() == R3.getCantidadOptima()) {
+						compara1 = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti2() > R3.getCantidadOptima()) {
+			compara2 = "más que la cantidad óptima";}
+		if(R1.getCanti2() < R3.getCantidadOptima()) {
+			compara2 = "menos que el promedio";}
+			else if (R1.getCanti2() == R3.getCantidadOptima()) {
+						compara2 = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti3() > R3.getCantidadOptima()) {
+			compara3 = "más que la cantidad óptima";}
+		if(R1.getCanti3() < R3.getCantidadOptima()) {
+			compara3 = "menos que el promedio";}
+			else if (R1.getCanti3() == R3.getCantidadOptima()) {
+						compara3 = "igual que la cantidad óptima";}
+		
+		if(R1.getCanti4() > R3.getCantidadOptima()) {
+			compara4 = "más que la cantidad óptima";}
+		if(R1.getCanti4() < R3.getCantidadOptima()) {
+			compara4 = "menos que el promedio";}
+			else if (R1.getCanti4() == R3.getCantidadOptima()) {
+						compara4 = "igual que la cantidad óptima";}
+
+		//Buscar Mayor y menos precio
+		if (R1.getPrecio0() <= R1.getPrecio1() && R1.getPrecio0() <= R1.getPrecio2() && R1.getPrecio0() <= R1.getPrecio3() && R1.getPrecio0() <= R1.getPrecio4()) {
+            menorPrecio = R1.getPrecio0();
+        } else if (escribe un programa donde haya 5 precios fijos sin usar for, solo if para buscar el mayor y menor precio. <= precio1 && precio2 <= precio3 && precio2 <= precio4 && precio2 <= precio5) {
+            menorPrecio = precio2;
+        } else if (precio3 <= precio1 && precio3 <= precio2 && precio3 <= precio4 && precio3 <= precio5) {
+            menorPrecio = precio3;
+        } else if (precio4 <= precio1 && precio4 <= precio2 && precio4 <= precio3 && precio4 <= precio5) {
+            menorPrecio = precio4;
+        } else {
+            menorPrecio = precio5;
+        }
+
+        // Comparación para encontrar el mayor precio
+        if (precio1 >= precio2 && precio1 >= precio3 && precio1 >= precio4 && precio1 >= precio5) {
+            mayorPrecio = precio1;
+        } else if (precio2 >= precio1 && precio2 >= precio3 && precio2 >= precio4 && precio2 >= precio5) {
+            mayorPrecio = precio2;
+        } else if (precio3 >= precio1 && precio3 >= precio2 && precio3 >= precio4 && precio3 >= precio5) {
+            mayorPrecio = precio3;
+        } else if (precio4 >= precio1 && precio4 >= precio2 && precio4 >= precio3 && precio4 >= precio5) {
+            mayorPrecio = precio4;
+        } else {
+            mayorPrecio = precio5;
+        }
+		
+		
+		int report;
+		report = cboReport.getSelectedIndex();
+		
+		switch(report) {
+		case 0: txtS.setText("VENTAS POR MODELO" + "\n" +
+							"" +  "\n" +
+							"Modelo : " + modelo0+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti() + "\n" +
+							"Importe total vendido : " + R1.getIc() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp()) + "%"+ "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo1+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta1()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti1() + "\n" +
+
+							"Importe total vendido : " + R1.getIc1() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp1())+ "%" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo2+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta2()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti2() + "\n" +
+
+							"Importe total vendido : " + R1.getIc2() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp2())+ "%" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo3+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta3()  + "\n" +
+							"Cantidad de cajas vendidas : " + R1.getCanti3() + "\n" +
+
+							"Importe total vendido : " + R1.getIc3() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp3())+ "%" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo4+ "\n" + 
+							"Cantidad de ventas : " + R1.getConta4()  + "\n" +
+							"Cantidad de cajas vendidas : " +  df.format(R1.getCanti4()) + "\n" +
+
+							"Importe total vendido : " + R1.getIc4() + "\n"+ 
+							"Aporte a la cuota diaria : " + df.format(R1.getAp())+ "%" + "\n"+
+							"" + "\n" 
+							);break;
+		case 1: txtS.setText("COMPARACIÓN DE PRECIOS CON EL PRECIO PROMEDIO" + "\n" +
+							"" + "\n" +
+							"Modelo : " + modelo0 + "\n" +
+							"Precio : " + R2.getPrecio_0() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c) +" "+ comparacion +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo1 + "\n" +
+							"Precio : " + R2.getPrecio_1() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c1)+ " "+comparacion1 +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo2 + "\n" +
+							"Precio : " + R2.getPrecio_2() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c2) +" "+ comparacion2+"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo3 + "\n" +
+							"Precio : " + R2.getPrecio_3() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c3)+ " "+comparacion3 +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo4 + "\n" +
+							"Precio : " + R2.getPrecio_4() + "\n" +
+							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
+							"Comparación : " + df.format(c4) +" "+ comparacion4+"\n" +
+							"" + "\n" 
+							);break;
+		case 2:txtS.setText("COMPARACIÓN DE CAJAS VENDIDAS CON LA CANTIDAD ÓPTIMA"+ "\n" +
+				"" + "\n" +
+				"Modelo : " + modelo0 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc +" "+ compara +"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo1 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti1() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc1+" "+compara1 +"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo2 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti2() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc2+" "+compara2 +"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo3 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti3() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc3 +" "+compara3+"\n" +
+				"" + "\n" +
+				"Modelo : " + modelo4 + "\n" +
+				"Cantidad de cajas vendidas : " + R1.getCanti4() + "\n" +
+				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
+				"Comparación : " + cc4+" " +compara4+"\n" +
+				"" + "\n" 
+				);break;
+		default: txtS.setText("ESTADÍSTICA SOBRE EL PRECIO"+ "\n" +
+				"" + "\n" +
+				"Precio promedio : " + R1.getPromedio() + "\n" +
+				"Precio mayor : " + "" + "\n" +
+				"Precio menor : " + "" + "\n" 
+				);
+		}
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2023-06-19 17:04:13.598
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2023-06-19 17:04:13.599
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
