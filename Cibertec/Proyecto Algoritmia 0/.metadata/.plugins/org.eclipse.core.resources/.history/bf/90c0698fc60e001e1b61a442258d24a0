@@ -252,7 +252,4 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 		GUI_ListarCeramico newFrame  = new GUI_ListarCeramico();
 		newFrame.setVisible(true);
 	}
-
-	String comparacion;
-	
 }

@@ -311,27 +311,27 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 				"Modelo : " + modelo0 + "\n" +
 				"Cantidad de cajas vendidas : " + R1.getCanti() + "\n" +
 				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
-				"Comparación : " + cc +" "+ compara +"\n" +
+				"Comparación : " + "" +"\n" +
 				"" + "\n" +
 				"Modelo : " + modelo1 + "\n" +
 				"Cantidad de cajas vendidas : " + R1.getCanti1() + "\n" +
 				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
-				"Comparación : " + cc1+" "+compara1 +"\n" +
+				"Comparación : " + "" +"\n" +
 				"" + "\n" +
 				"Modelo : " + modelo2 + "\n" +
 				"Cantidad de cajas vendidas : " + R1.getCanti2() + "\n" +
 				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
-				"Comparación : " + cc2+" "+compara2 +"\n" +
+				"Comparación : " + "" +"\n" +
 				"" + "\n" +
 				"Modelo : " + modelo3 + "\n" +
 				"Cantidad de cajas vendidas : " + R1.getCanti3() + "\n" +
 				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
-				"Comparación : " + cc3 +" "+compara3+"\n" +
+				"Comparación : " + "" +"\n" +
 				"" + "\n" +
 				"Modelo : " + modelo4 + "\n" +
 				"Cantidad de cajas vendidas : " + R1.getCanti4() + "\n" +
 				"Cantidad óptima : " + R3.getCantidadOptima() + "\n" +
-				"Comparación : " + cc4+" " +compara4+"\n" +
+				"Comparación : " + "" +"\n" +
 				"" + "\n" 
 				);break;
 		default: txtS.setText("ESTADÍSTICA SOBRE EL PRECIO"+ "\n" +
