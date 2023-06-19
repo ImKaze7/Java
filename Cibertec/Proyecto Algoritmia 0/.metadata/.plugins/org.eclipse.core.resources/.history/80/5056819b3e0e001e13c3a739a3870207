@@ -1,0 +1,197 @@
+package ProyectVentasCeramico;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+
+public class GUI_GenerarReportes extends JDialog implements ActionListener {
+	private static final long serialVersionUID = 1L;
+	public static String modelo0 ="Cinza Plus";
+	public static double precio0 = 92.56;
+	public static double ancho0 = 62.00;
+	public static double largo0 = 62.00;
+	public static double espesor0 = 8;
+	public static int contenido0 = 6;
+	
+	public static String modelo1 = "Luxury";
+	public static double precio1 = 42.77;
+	public static double ancho1 = 60;
+	public static double largo1 = 60;
+	public static double espesor1 = 8.5;
+	public static int contenido1 = 6;
+	
+	public static String modelo2 = "Austria";
+	public static double precio2 = 52.45;
+	public static double ancho2 = 45;
+	public static double largo2 = 45;
+	public static double espesor2 = 6.5;
+	public static int contenido2 = 12;
+	
+	public static String modelo3 = "Yungay Mix";
+	public static double precio3 = 55.89;
+	public static double ancho3 = 80;
+	public static double largo3 = 120;
+	public static double espesor3 = 6.8;
+	public static int contenido3 = 9;
+	
+	public static String modelo4 = "Thalía";
+	public static double precio4 = 45;
+	public static double ancho4 = 45;
+	public static double largo4 = 11.8;
+	public static double espesor4 = 7.2;
+	public static int contenido4 = 10;
+	public static double porcentaje1 = 7.5;
+	public static double porcentaje2 = 10.0;
+	public static double porcentaje3 = 12.5;
+	public static double porcentaje4 = 15.0;
+	// Obsequio
+	public static String tipoObsequio = "Lapicero";
+	public static int obsequioCantidad1 = 2;
+	public static int obsequioCantidad2 = 3;
+	public static int obsequioCantidad3 = 4;
+	public static int cantidadOptima = 10;
+	// Cuota diaria
+	public static double cuotaDiaria = 30000;//100%
+	private final JPanel contentPanel = new JPanel();
+	private JButton btnCerrar;
+	private JScrollPane scrollPane;
+	private JTextArea txtS;
+	private JComboBox cboReport;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			GUI_GenerarReportes dialog = new GUI_GenerarReportes();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public GUI_GenerarReportes() {
+		setBounds(100, 100, 747, 448);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("Tipo de reporte");
+			lblNewLabel.setBounds(10, 24, 105, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			cboReport = new JComboBox();
+			cboReport.addActionListener(this);
+			cboReport.setModel(new DefaultComboBoxModel(new String[] {"Ventas por modelo", "Comparación de precios con el precio promedio", "Comparación de cajas vendidas con la cantidad óptima", "Estadística sobre el precio"}));
+			cboReport.setBounds(125, 20, 390, 22);
+			contentPanel.add(cboReport);
+		}
+		{
+			btnCerrar = new JButton("Cerrar");
+			btnCerrar.addActionListener(this);
+			btnCerrar.setBounds(588, 20, 89, 23);
+			contentPanel.add(btnCerrar);
+		}
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 63, 711, 335);
+		contentPanel.add(scrollPane);
+		
+		txtS = new JTextArea();
+		txtS.setEditable(false);
+		scrollPane.setViewportView(txtS);
+	}
+	//JOptionPane.showMessageDialog(null)
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == cboReport) {
+			actionPerformedComboBox(e);
+		}
+		if (e.getSource() == btnCerrar) {
+			actionPerformedBtnNewButton(e);
+		}
+	}
+	protected void actionPerformedBtnNewButton(ActionEvent e) {
+		dispose();
+	}
+	protected void actionPerformedComboBox(ActionEvent e) {
+		GUI_Vender aa = new GUI_Vender();
+		int report;
+		report = cboReport.getSelectedIndex();
+		
+		switch(report) {
+		case 0: txtS.setText("VENTAS POR MODELO" + "\n" +
+							"" +  "\n" +
+							"Modelo : " + modelo0+ "\n" + 
+							"Cantidad de ventas : " + ""  + "\n" +
+							"Importe total vendido : " + "" + "\n"+ 
+							"Aporte a la cuota diaria : " + "" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo1+ "\n" + 
+							"Cantidad de ventas : " + ""  + "\n" +
+							"Importe total vendido : " + "" + "\n"+ 
+							"Aporte a la cuota diaria : " + "" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo2+ "\n" + 
+							"Cantidad de ventas : " + ""  + "\n" +
+							"Importe total vendido : " + "" + "\n"+ 
+							"Aporte a la cuota diaria : " + "" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo3+ "\n" + 
+							"Cantidad de ventas : " + ""  + "\n" +
+							"Importe total vendido : " + "" + "\n"+ 
+							"Aporte a la cuota diaria : " + "" + "\n"+
+							"" + "\n" +
+							"Modelo : " + modelo4+ "\n" + 
+							"Cantidad de ventas : " + ""  + "\n" +
+							"Importe total vendido : " + "" + "\n"+ 
+							"Aporte a la cuota diaria : " + "" + "\n"+
+							"" + "\n" 
+							);break;
+		case 1: txtS.setText("COMPARACIÓN DE PRECIOS CON EL PRECIO PROMEDIO" + "\n" +
+							"" + "\n" +
+							"Modelo : " + modelo0 + "\n" +
+							"Precio : " + "" + "\n" +
+							"Precio promedio : " + "" + "\n" +
+							"Comparación : " + "" +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo1 + "\n" +
+							"Precio : " + "" + "\n" +
+							"Precio promedio : " + "" + "\n" +
+							"Comparación : " + "" +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo2 + "\n" +
+							"Precio : " + "" + "\n" +
+							"Precio promedio : " + "" + "\n" +
+							"Comparación : " + "" +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo3 + "\n" +
+							"Precio : " + "" + "\n" +
+							"Precio promedio : " + "" + "\n" +
+							"Comparación : " + "" +"\n" +
+							"" + "\n" +
+							"Modelo : " + modelo4 + "\n" +
+							"Precio : " + "" + "\n" +
+							"Precio promedio : " + "" + "\n" +
+							"Comparación : " + "" +"\n" +
+							"" + "\n" 
+							);
+		}
+	}
+}
