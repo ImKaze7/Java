@@ -147,12 +147,7 @@ public class GUI_ConfigurarDescuentos extends JDialog implements ActionListener 
 		}
 	}
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
-		porcentaje1 = Double.parseDouble(txt1.getText());
-		porcentaje2 = Double.parseDouble(txt2.getText());
-		porcentaje3 = Double.parseDouble(txt3.getText());
-		porcentaje4 = Double.parseDouble(txt4.getText());
-
-		dispose();
+		
 		
 	}
 	
@@ -180,6 +175,11 @@ public class GUI_ConfigurarDescuentos extends JDialog implements ActionListener 
 
 	
 	protected void actionPerformedBtnCerrar(ActionEvent e) {
-		
+		porcentaje1 = Double.parseDouble(txt1.getText());
+		porcentaje2 = Double.parseDouble(txt2.getText());
+		porcentaje3 = Double.parseDouble(txt3.getText());
+		porcentaje4 = Double.parseDouble(txt4.getText());
+
+		dispose();
 	}
 }

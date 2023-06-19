@@ -22,9 +22,6 @@ import java.text.DecimalFormat;
 public class GUI_Vender extends JDialog implements ActionListener {
 	GUI_ModificarCeramico aaa = new GUI_ModificarCeramico();
 	GUI_ConfigurarCuotaDiaria R4 = new GUI_ConfigurarCuotaDiaria();
-	GUI_ConfigurarObsequios R5 = new GUI_ConfigurarObsequios();
-	GUI_ConfigurarDescuentos R6 = new GUI_ConfigurarDescuentos();
-
 double tot1, tot2, tot3, tot4, tot5;
 	DecimalFormat df = new DecimalFormat("0.00");
 	private final JPanel contentPanel = new JPanel();
@@ -364,17 +361,17 @@ double tot1, tot2, tot3, tot4, tot5;
 			ap = (ic*100)/R4.getCuotaDiaria();
 			  
 			if(canti >= 1 && canti <=5){	
-				 des=ic*(R6.getPorcentaje1()/100);
+				 des=ic*(porcentaje1/100);
 				 }
 			 
 			 if(canti >=6 && canti <=10) { 
-				des=ic*(R6.getPorcentaje2()/100);
+				des=ic*(porcentaje2/100);
 				}
 			 
 			 if (canti >=11  && canti <=15) {
-				des=ic*(R6.getPorcentaje3()/100);
+				des=ic*(porcentaje3/100);
 				}else if (canti >15) {
-				des=ic*(R6.getPorcentaje4()/100);
+				des=ic*(porcentaje4/100);
 				}
 			 
 			 
@@ -394,11 +391,11 @@ double tot1, tot2, tot3, tot4, tot5;
 		
 
 				if(canti >=1 && canti <=5) 
-					obs=R5.getObsequioCantidad1();
+					obs=obsequioCantidad1;
 				if (canti >=6 && canti <=10) 
-					obs=R5.getObsequioCantidad2();
+					obs=obsequioCantidad2;
 				else if(canti>10)
-					obs=R5.getObsequioCantidad3();
+					obs=obsequioCantidad3;
 				;break;
 				
 		case 1:modelo="Luxury";
@@ -409,17 +406,17 @@ double tot1, tot2, tot3, tot4, tot5;
 			  
 
 		 if(canti1 >= 1 && canti1 <=5){	
-			 des=ic1*(R6.getPorcentaje1()/100);
+			 des=ic1*(porcentaje1/100);
 			 }
 		 
 		 if(canti1 >=6 && canti1 <=10) { 
-			des=ic1*(R6.getPorcentaje2()/100);
+			des=ic1*(porcentaje2/100);
 			}
 		 
 		 if (canti1 >=11  && canti1 <=15) {
-			des=ic1*(R6.getPorcentaje3()/100);
+			des=ic1*(porcentaje3/100);
 			}else if (canti1 >15) {
-			des=ic1*(R6.getPorcentaje4()/100);
+			des=ic1*(porcentaje4/100);
 			}
 		
 		 
@@ -432,12 +429,12 @@ double tot1, tot2, tot3, tot4, tot5;
              		 							"Importe total general acumulado : " + df.format(tot2) +"\n"+
              		 							"Porcentaje de la cuota diaria: " + df.format(cd2)+"%" +"\n");
           }
-          if(canti >=1 && canti <=5) 
-				obs=R5.getObsequioCantidad1();
-			if (canti >=6 && canti <=10) 
-				obs=R5.getObsequioCantidad2();
-			else if(canti>10)
-				obs=R5.getObsequioCantidad3();
+				if(canti1 >=1 && canti1 <=5) 
+					obs=obsequioCantidad1;
+				if (canti1 >=6 && canti1 <=10) 
+					obs=obsequioCantidad2;
+				else if(canti1 >10)
+					obs=obsequioCantidad3;
 				;break;
 				
 		case 2:modelo="Austria";
@@ -448,17 +445,17 @@ double tot1, tot2, tot3, tot4, tot5;
 			  
 
 			if(canti2 >= 1 && canti2 <=5){	
-				 des=ic2*(R6.getPorcentaje1()/100);
+				 des=ic2*(porcentaje1/100);
 				 }
 			 
 			 if(canti2 >=6 && canti2 <=10) { 
-				des=ic2*(R6.getPorcentaje2()/100);
+				des=ic2*(porcentaje2/100);
 				}
 			 
 			 if (canti2 >=11  && canti2 <=15) {
-				des=ic2*(R6.getPorcentaje3()/100);
+				des=ic2*(porcentaje3/100);
 				}else if (canti2 >15) {
-				des=ic2*(R6.getPorcentaje4()/100);
+				des=ic2*(porcentaje4/100);
 				}
 			 ip=ic2-des;	 tot3+=ip;
 				//Acumula EL importe a pagar
@@ -468,12 +465,12 @@ double tot1, tot2, tot3, tot4, tot5;
 	              JOptionPane.showMessageDialog(null, "Venta Nro. 5" + "\n" + 
 	             		 							"Importe total general acumulado : " + df.format(tot3) +"\n"+
 	             		 							"Porcentaje de la cuota diaria: " + df.format(cd3)+"%" +"\n");
-	          }			if(canti >=1 && canti <=5) 
-					obs=R5.getObsequioCantidad1();
-				if (canti >=6 && canti <=10) 
-					obs=R5.getObsequioCantidad2();
-				else if(canti>10)
-					obs=R5.getObsequioCantidad3();
+	          }				if(canti2 >=1 && canti2 <=5) 
+					obs=obsequioCantidad1;
+				if (canti2 >=6 && canti2 <=10) 
+					obs=obsequioCantidad2;
+				else if(canti2 >10)
+					obs=obsequioCantidad3;
 				;break;
 		case 3:modelo="Yungay Mix";
 		canti3 = Integer.parseInt(txtCanti.getText());
@@ -483,17 +480,17 @@ double tot1, tot2, tot3, tot4, tot5;
 			  
 
 			if(canti3 >= 1 && canti3 <=5){	
-				 des=ic3*(R6.getPorcentaje1()/100);
+				 des=ic3*(porcentaje1/100);
 				 }
 			 
 			 if(canti3 >=6 && canti3 <=10) { 
-				des=ic3*(R6.getPorcentaje2()/100);
+				des=ic3*(porcentaje2/100);
 				}
 			 
 			 if (canti3 >=11  && canti3 <=15) {
-				des=ic3*(R6.getPorcentaje3()/100);
+				des=ic3*(porcentaje3/100);
 				}else if (canti3 >15) {
-				des=ic3*(R6.getPorcentaje4()/100);
+				des=ic3*(porcentaje4/100);
 				}
 			 ip=ic3-des;	 tot4+=ip;
 				//Acumula EL importe a pagar
@@ -503,12 +500,12 @@ double tot1, tot2, tot3, tot4, tot5;
 	              JOptionPane.showMessageDialog(null, "Venta Nro. 5" + "\n" + 
 	             		 							"Importe total general acumulado : " + df.format(tot4) +"\n"+
 	             		 							"Porcentaje de la cuota diaria: " + df.format(cd4)+"%" +"\n");
-	          }				if(canti >=1 && canti <=5) 
-					obs=R5.getObsequioCantidad1();
-				if (canti >=6 && canti <=10) 
-					obs=R5.getObsequioCantidad2();
-				else if(canti>10)
-					obs=R5.getObsequioCantidad3();
+	          }				if(canti3 >=1 && canti3 <=5) 
+					obs=obsequioCantidad1;
+				if (canti3 >=6 && canti3 <=10) 
+					obs=obsequioCantidad2;
+				else if(canti3 >10)
+					obs=obsequioCantidad3;
 				;break;
 		default:modelo="Thalía";
 		canti4 = Integer.parseInt(txtCanti.getText());
@@ -519,17 +516,17 @@ double tot1, tot2, tot3, tot4, tot5;
 			 
 
 			if(canti4 >= 1 && canti4 <=5){	
-				 des=ic4*(R6.getPorcentaje1()/100);
+				 des=ic4*(porcentaje1/100);
 				 }
 			 
 			 if(canti4 >=6 && canti4 <=10) { 
-				des=ic4*(R6.getPorcentaje2()/100);
+				des=ic4*(porcentaje2/100);
 				}
 			 
 			 if (canti4 >=11  && canti4 <=15) {
-				des=ic4*(R6.getPorcentaje3()/100);
+				des=ic4*(porcentaje3/100);
 				}else if (canti4 >15) {
-				des=ic4*(R6.getPorcentaje4()/100);
+				des=ic4*(porcentaje4/100);
 				}
 			 ip=ic4-des;	 tot5+=ip;
 				//Acumula EL importe a pagar
@@ -539,13 +536,12 @@ double tot1, tot2, tot3, tot4, tot5;
 	              JOptionPane.showMessageDialog(null, "Venta Nro. 5" + "\n" + 
 	             		 							"Importe total general acumulado : " + df.format(tot5) +"\n"+
 	             		 							"Porcentaje de la cuota diaria: " + df.format(cd5)+"%" +"\n");
-	          }				
-	            if(canti >=1 && canti <=5) 
-					obs=R5.getObsequioCantidad1();
-				if (canti >=6 && canti <=10) 
-					obs=R5.getObsequioCantidad2();
-				else if(canti>10)
-					obs=R5.getObsequioCantidad3();
+	          }				if(canti4 >=1 && canti4 <=5) 
+					obs=obsequioCantidad1;
+				if (canti4 >=6 && canti4 <=10) 
+					obs=obsequioCantidad2;
+				else if(canti4 >10)
+					obs=obsequioCantidad3;
 				;break;
 				
 		}
@@ -558,7 +554,7 @@ double tot1, tot2, tot3, tot4, tot5;
 		txtS.append("Importe compra      : " + df.format(ic)+ "\n");
 		txtS.append("Importe descuento   : " + df.format(des) +"\n");
 		txtS.append("Importe pagar       : " + df.format(ip)+ "\n");
-		txtS.append("Tipo de obsequio    : " + R5.getTipoObsequio()+ "\n");
+		txtS.append("Tipo de obsequio    : " + " Lapicero"+ "\n");
 		txtS.append("Unidades obsequiadas: " + obs);
 	}
 		

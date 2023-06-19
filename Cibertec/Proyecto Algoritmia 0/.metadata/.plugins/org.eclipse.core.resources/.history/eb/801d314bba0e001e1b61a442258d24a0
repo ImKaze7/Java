@@ -114,9 +114,9 @@ public class GUI_ConfigurarObsequios extends JDialog implements ActionListener {
 	}
 	void CrearDatos() {
 	txt1.setText(tipoObsequio);
-	txt2.setText(Integer.toString(obsequioCantidad1));
-	txt3.setText(Integer.toString(obsequioCantidad2));
-	txt4.setText(Integer.toString(obsequioCantidad3));
+	txt2.setText(Double.toString(obsequioCantidad1));
+	txt3.setText(Double.toString(obsequioCantidad2));
+	txt4.setText(Double.toString(obsequioCantidad3));
 	}
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnAceptar) {

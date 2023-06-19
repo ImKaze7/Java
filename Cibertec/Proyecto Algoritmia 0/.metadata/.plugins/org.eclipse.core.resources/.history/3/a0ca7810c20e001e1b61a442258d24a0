@@ -151,8 +151,8 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 		compa1 = Double.parseDouble(R2.getPrecio_1())-R1.getPromedio();
 		compa2 = Double.parseDouble(R2.getPrecio_2())-R1.getPromedio();
 		compa3 = Double.parseDouble(R2.getPrecio_3())-R1.getPromedio();
-		
-		double c4=Math.abs(compa4 = Double.parseDouble(R2.getPrecio_4())-R1.getPromedio());
+		compa4 = Double.parseDouble(R2.getPrecio_4())-R1.getPromedio();
+		double c4=Math.abs(compa4);
 
 		
 		int report;
@@ -221,7 +221,7 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 							"Modelo : " + modelo4 + "\n" +
 							"Precio : " + R2.getPrecio_4() + "\n" +
 							"Precio promedio : " + df.format(R1.getPromedio()) + "\n" +
-							"Comparación : " + df.format(c4) +"\n" +
+							"Comparación : " + c4 +"\n" +
 							"" + "\n" 
 							);break;
 		case 2:txtS.setText("COMPARACIÓN DE CAJAS VENDIDAS CON LA CANTIDAD ÓPTIMA"+ "\n" +

@@ -556,7 +556,7 @@ double tot1, tot2, tot3, tot4, tot5;
 		txtS.append("Precio              : " + precio+ "\n");
 		txtS.append("Cantidad adquirida  : " + canti+ "\n");
 		txtS.append("Importe compra      : " + df.format(ic)+ "\n");
-		txtS.append("Importe descuento   : " + df.format(des) +"\n");
+		txtS.append("Importe descuento   : " + df.format(R6.getPorcentaje1()) +"\n");
 		txtS.append("Importe pagar       : " + df.format(ip)+ "\n");
 		txtS.append("Tipo de obsequio    : " + R5.getTipoObsequio()+ "\n");
 		txtS.append("Unidades obsequiadas: " + obs);

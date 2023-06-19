@@ -114,9 +114,9 @@ public class GUI_ConfigurarObsequios extends JDialog implements ActionListener {
 	}
 	void CrearDatos() {
 	txt1.setText(tipoObsequio);
-	txt2.setText(Integer.toString(obsequioCantidad1));
-	txt3.setText(Integer.toString(obsequioCantidad2));
-	txt4.setText(Integer.toString(obsequioCantidad3));
+	txt2.setText(Double.toString(obsequioCantidad1));
+	txt3.setText(Double.toString(obsequioCantidad2));
+	txt4.setText(Double.toString(obsequioCantidad3));
 	}
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnAceptar) {
@@ -130,30 +130,8 @@ public class GUI_ConfigurarObsequios extends JDialog implements ActionListener {
 		dispose();
 	}
 	
-	
-	public static String getTipoObsequio() {
-		return tipoObsequio;
-	}
-
-	
-
-	public static int getObsequioCantidad1() {
-		return obsequioCantidad1;
-	}
-
-	
-
-	public static int getObsequioCantidad2() {
-		return obsequioCantidad2;
-	}
-
-	
-	public static int getObsequioCantidad3() {
-		return obsequioCantidad3;
-	}
-
 	protected void actionPerformedBtnAceptar(ActionEvent e) {
-		tipoObsequio = txt1.getText();
+		
 		obsequioCantidad1 = Integer.parseInt(txt2.getText());
 		obsequioCantidad2 = Integer.parseInt(txt3.getText());
 		obsequioCantidad3 = Integer.parseInt(txt4.getText());

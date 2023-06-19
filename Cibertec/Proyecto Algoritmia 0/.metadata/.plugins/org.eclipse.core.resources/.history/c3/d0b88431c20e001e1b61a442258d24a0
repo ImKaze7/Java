@@ -151,8 +151,8 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 		compa1 = Double.parseDouble(R2.getPrecio_1())-R1.getPromedio();
 		compa2 = Double.parseDouble(R2.getPrecio_2())-R1.getPromedio();
 		compa3 = Double.parseDouble(R2.getPrecio_3())-R1.getPromedio();
-		
-		double c4=Math.abs(compa4 = Double.parseDouble(R2.getPrecio_4())-R1.getPromedio());
+		compa4 = Double.parseDouble(R2.getPrecio_4())-R1.getPromedio();
+		double c4=Math.abs(compa4);
 
 		
 		int report;
