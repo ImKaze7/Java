@@ -104,25 +104,25 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		contentPanel.add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("Precio (S/)");
-		lblNewLabel_1.setBounds(10, 54, 68, 14);
+		lblNewLabel_1.setBounds(10, 54, 89, 14);
 		contentPanel.add(lblNewLabel_1);
 		
 		cboMode = new JComboBox();
 		cboMode.addActionListener(this);
 		cboMode.setModel(new DefaultComboBoxModel(new String[] {"Cinza Plus", "Luxury", "Austria", "Yungay Mix", "Thalía"}));
-		cboMode.setBounds(88, 19, 225, 22);
+		cboMode.setBounds(100, 19, 225, 22);
 		contentPanel.add(cboMode);
 		
 		lblNewLabel_2 = new JLabel("Ancho (cm)");
-		lblNewLabel_2.setBounds(10, 91, 68, 14);
+		lblNewLabel_2.setBounds(10, 91, 89, 14);
 		contentPanel.add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Largo (cm)");
-		lblNewLabel_3.setBounds(10, 128, 68, 14);
+		lblNewLabel_3.setBounds(10, 128, 89, 14);
 		contentPanel.add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("Espesor (mm)");
-		lblNewLabel_4.setBounds(10, 161, 80, 14);
+		lblNewLabel_4.setBounds(10, 161, 89, 14);
 		contentPanel.add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("Contenido");
@@ -130,27 +130,27 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		contentPanel.add(lblNewLabel_5);
 		
 		txtPrecio = new JTextField();
-		txtPrecio.setBounds(88, 51, 225, 20);
+		txtPrecio.setBounds(100, 51, 225, 20);
 		contentPanel.add(txtPrecio);
 		txtPrecio.setColumns(10);
 		
 		txtAncho = new JTextField();
-		txtAncho.setBounds(88, 88, 225, 20);
+		txtAncho.setBounds(100, 88, 225, 20);
 		contentPanel.add(txtAncho);
 		txtAncho.setColumns(10);
 		
 		txtLargo = new JTextField();
-		txtLargo.setBounds(86, 125, 227, 20);
+		txtLargo.setBounds(98, 125, 227, 20);
 		contentPanel.add(txtLargo);
 		txtLargo.setColumns(10);
 		
 		txtEspe = new JTextField();
-		txtEspe.setBounds(88, 158, 225, 20);
+		txtEspe.setBounds(100, 158, 225, 20);
 		contentPanel.add(txtEspe);
 		txtEspe.setColumns(10);
 		
 		txtConte = new JTextField();
-		txtConte.setBounds(87, 194, 226, 20);
+		txtConte.setBounds(99, 194, 226, 20);
 		contentPanel.add(txtConte);
 		txtConte.setColumns(10);
 		

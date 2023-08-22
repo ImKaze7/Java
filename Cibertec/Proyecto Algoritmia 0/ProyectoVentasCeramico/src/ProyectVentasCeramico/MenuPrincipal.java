@@ -232,7 +232,7 @@ public class MenuPrincipal extends JFrame implements ActionListener {
 	protected void actionPerformedMntmNewMenuItem_9(ActionEvent e) {
 		GUI_ConfigurarCuotaDiaria newDialog = new GUI_ConfigurarCuotaDiaria();
 		newDialog.setVisible(true);
-	}
+	} 
 	
 
 	protected void actionPerformedAcercaDeTienda(ActionEvent e) {

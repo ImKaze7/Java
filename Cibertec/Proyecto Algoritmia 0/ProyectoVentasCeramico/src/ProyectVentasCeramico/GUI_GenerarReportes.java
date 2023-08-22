@@ -263,35 +263,35 @@ public class GUI_GenerarReportes extends JDialog implements ActionListener {
 							"Modelo : " + modelo0+ "\n" + 
 							"Cantidad de ventas : " + R1.getConta()  + "\n" +
 							"Cantidad de cajas vendidas : " + R1.getCanti() + "\n" +
-							"Importe total vendido : " + R1.getIc() + "\n"+ 
+							"Importe total vendido : " + df.format(R1.getIc()) + "\n"+ 
 							"Aporte a la cuota diaria : " + df.format(R1.getAp()) + "%"+ "\n"+
 							"" + "\n" +
 							"Modelo : " + modelo1+ "\n" + 
 							"Cantidad de ventas : " + R1.getConta1()  + "\n" +
 							"Cantidad de cajas vendidas : " + R1.getCanti1() + "\n" +
 
-							"Importe total vendido : " + R1.getIc1() + "\n"+ 
+							"Importe total vendido : " + df.format(R1.getIc1()) + "\n"+ 
 							"Aporte a la cuota diaria : " + df.format(R1.getAp1())+ "%" + "\n"+
 							"" + "\n" +
 							"Modelo : " + modelo2+ "\n" + 
 							"Cantidad de ventas : " + R1.getConta2()  + "\n" +
 							"Cantidad de cajas vendidas : " + R1.getCanti2() + "\n" +
 
-							"Importe total vendido : " + R1.getIc2() + "\n"+ 
+							"Importe total vendido : " + df.format(R1.getIc2()) + "\n"+ 
 							"Aporte a la cuota diaria : " + df.format(R1.getAp2())+ "%" + "\n"+
 							"" + "\n" +
 							"Modelo : " + modelo3+ "\n" + 
 							"Cantidad de ventas : " + R1.getConta3()  + "\n" +
 							"Cantidad de cajas vendidas : " + R1.getCanti3() + "\n" +
 
-							"Importe total vendido : " + R1.getIc3() + "\n"+ 
+							"Importe total vendido : " + df.format(R1.getIc3()) + "\n"+ 
 							"Aporte a la cuota diaria : " + df.format(R1.getAp3())+ "%" + "\n"+
 							"" + "\n" +
 							"Modelo : " + modelo4+ "\n" + 
 							"Cantidad de ventas : " + R1.getConta4()  + "\n" +
 							"Cantidad de cajas vendidas : " +  df.format(R1.getCanti4()) + "\n" +
 
-							"Importe total vendido : " + R1.getIc4() + "\n"+ 
+							"Importe total vendido : " + df.format(R1.getIc4()) + "\n"+ 
 							"Aporte a la cuota diaria : " + df.format(R1.getAp())+ "%" + "\n"+
 							"" + "\n" 
 							);break;

@@ -45,12 +45,12 @@ public class GUI_ConfigurarCuotaDiaria extends JDialog implements ActionListener
 		contentPanel.setLayout(null);
 		{
 			JLabel lblNewLabel = new JLabel("Cuota diaria esperada (S/.)");
-			lblNewLabel.setBounds(10, 11, 156, 14);
+			lblNewLabel.setBounds(10, 11, 186, 14);
 			contentPanel.add(lblNewLabel);
 		}
 		{
 			txt1 = new JTextField();
-			txt1.setBounds(176, 8, 118, 20);
+			txt1.setBounds(206, 8, 118, 20);
 			contentPanel.add(txt1);
 			txt1.setColumns(10);
 		}
@@ -69,6 +69,7 @@ public class GUI_ConfigurarCuotaDiaria extends JDialog implements ActionListener
 	}
 	
 	public GUI_ConfigurarCuotaDiaria() {
+		setTitle("Cuota Diaria");
 	initialize();	
 	CrearDatos();
 	}

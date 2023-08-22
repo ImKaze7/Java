@@ -44,37 +44,38 @@ public class GUI_ConfigurarCantidadOptima extends JDialog implements ActionListe
 	 */
 	private void initialize() {
 		setTitle("Configurar cantidad óptima");
-		setBounds(100, 100, 459, 106);
+		setBounds(100, 100, 507, 106);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		{
-			JLabel lblNewLabel = new JLabel("Cantidad óptima de unidades vendidas");
-			lblNewLabel.setBounds(10, 11, 228, 14);
+			JLabel lblNewLabel = new JLabel("Cantidad óptima");
+			lblNewLabel.setBounds(10, 11, 242, 14);
 			contentPanel.add(lblNewLabel);
 		}
 		{
 			txt1 = new JTextField();
-			txt1.setBounds(226, 8, 108, 20);
+			txt1.setBounds(138, 8, 232, 20);
 			contentPanel.add(txt1);
 			txt1.setColumns(10);
 		}
 		{
 			btnAceptar = new JButton("Aceptar");
 			btnAceptar.addActionListener(this);
-			btnAceptar.setBounds(344, 7, 89, 23);
+			btnAceptar.setBounds(380, 7, 89, 23);
 			contentPanel.add(btnAceptar);
 		}
 		{
 			btnCancelar = new JButton("Cancelar");
 			btnCancelar.addActionListener(this);
-			btnCancelar.setBounds(344, 33, 89, 23);
+			btnCancelar.setBounds(380, 33, 89, 23);
 			contentPanel.add(btnCancelar);
 		}
 	}
 	public GUI_ConfigurarCantidadOptima() {
 		initialize();
+		CrearDatos();
 		
 	}
 
@@ -90,7 +91,10 @@ public class GUI_ConfigurarCantidadOptima extends JDialog implements ActionListe
 		dispose();
 	}
 	
-	
+	void CrearDatos() {
+		txt1.setText(Integer.toString(cantidadOptima));
+
+	}
 	public static int getCantidadOptima() {
 		return cantidadOptima;
 	}

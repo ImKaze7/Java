@@ -62,61 +62,61 @@ public class GUI_ConfigurarDescuentos extends JDialog implements ActionListener 
 		}
 		{
 			txt1 = new JTextField();
-			txt1.setBounds(113, 8, 86, 20);
+			txt1.setBounds(133, 8, 86, 20);
 			contentPanel.add(txt1);
 			txt1.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_1 = new JLabel("6 a 10 unidades");
-			lblNewLabel_1.setBounds(10, 36, 90, 14);
+			lblNewLabel_1.setBounds(10, 36, 113, 14);
 			contentPanel.add(lblNewLabel_1);
 		}
 		{
 			txt2 = new JTextField();
-			txt2.setBounds(113, 33, 86, 20);
+			txt2.setBounds(133, 33, 86, 20);
 			contentPanel.add(txt2);
 			txt2.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_2 = new JLabel("11 a 15 unidades");
-			lblNewLabel_2.setBounds(10, 61, 90, 14);
+			lblNewLabel_2.setBounds(10, 61, 113, 14);
 			contentPanel.add(lblNewLabel_2);
 		}
 		{
 			txt3 = new JTextField();
-			txt3.setBounds(113, 58, 86, 20);
+			txt3.setBounds(133, 58, 86, 20);
 			contentPanel.add(txt3);
 			txt3.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_3 = new JLabel("Más de 15 unidades");
-			lblNewLabel_3.setBounds(10, 86, 90, 14);
+			lblNewLabel_3.setBounds(10, 86, 113, 14);
 			contentPanel.add(lblNewLabel_3);
 		}
 		{
 			txt4 = new JTextField();
-			txt4.setBounds(113, 83, 86, 20);
+			txt4.setBounds(133, 83, 86, 20);
 			contentPanel.add(txt4);
 			txt4.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_4 = new JLabel("%");
-			lblNewLabel_4.setBounds(209, 11, 46, 14);
+			lblNewLabel_4.setBounds(229, 11, 46, 14);
 			contentPanel.add(lblNewLabel_4);
 		}
 		{
 			JLabel lblNewLabel_5 = new JLabel("%");
-			lblNewLabel_5.setBounds(209, 36, 46, 14);
+			lblNewLabel_5.setBounds(229, 36, 46, 14);
 			contentPanel.add(lblNewLabel_5);
 		}
 		{
 			JLabel lblNewLabel_5 = new JLabel("%");
-			lblNewLabel_5.setBounds(209, 61, 46, 14);
+			lblNewLabel_5.setBounds(229, 61, 46, 14);
 			contentPanel.add(lblNewLabel_5);
 		}
 		{
 			JLabel lblNewLabel_5 = new JLabel("%");
-			lblNewLabel_5.setBounds(209, 86, 46, 14);
+			lblNewLabel_5.setBounds(229, 86, 46, 14);
 			contentPanel.add(lblNewLabel_5);
 		}
 		{
@@ -180,6 +180,6 @@ public class GUI_ConfigurarDescuentos extends JDialog implements ActionListener 
 
 	
 	protected void actionPerformedBtnCerrar(ActionEvent e) {
-		
+		dispose();
 	}
 }

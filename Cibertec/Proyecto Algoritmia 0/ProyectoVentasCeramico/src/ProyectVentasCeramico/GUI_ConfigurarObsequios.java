@@ -54,23 +54,23 @@ public class GUI_ConfigurarObsequios extends JDialog implements ActionListener {
 		contentPanel.setLayout(null);
 		{
 			JLabel lblNewLabel = new JLabel("Tipo de obsequio");
-			lblNewLabel.setBounds(10, 11, 95, 14);
+			lblNewLabel.setBounds(10, 11, 105, 14);
 			contentPanel.add(lblNewLabel);
 		}
 		{
 			txt1 = new JTextField();
-			txt1.setBounds(126, 8, 95, 20);
+			txt1.setBounds(143, 8, 95, 20);
 			contentPanel.add(txt1);
 			txt1.setColumns(10);
 		}
 		{
 			JLabel lblNewLabel_1 = new JLabel("1 a 5 unidades");
-			lblNewLabel_1.setBounds(10, 36, 106, 14);
+			lblNewLabel_1.setBounds(10, 36, 123, 14);
 			contentPanel.add(lblNewLabel_1);
 		}
 		{
 			txt2 = new JTextField();
-			txt2.setBounds(126, 33, 95, 20);
+			txt2.setBounds(143, 33, 95, 20);
 			contentPanel.add(txt2);
 			txt2.setColumns(10);
 		}
@@ -82,23 +82,23 @@ public class GUI_ConfigurarObsequios extends JDialog implements ActionListener {
 		}
 		{
 			JLabel lblNewLabel_2 = new JLabel("6 a 10 unidades");
-			lblNewLabel_2.setBounds(10, 58, 106, 14);
+			lblNewLabel_2.setBounds(10, 58, 123, 14);
 			contentPanel.add(lblNewLabel_2);
 		}
 		{
 			JLabel lblNewLabel_3 = new JLabel("11 a más unidades");
-			lblNewLabel_3.setBounds(10, 83, 106, 14);
+			lblNewLabel_3.setBounds(10, 83, 123, 14);
 			contentPanel.add(lblNewLabel_3);
 		}
 		{
 			txt3 = new JTextField();
-			txt3.setBounds(126, 55, 95, 20);
+			txt3.setBounds(143, 55, 95, 20);
 			contentPanel.add(txt3);
 			txt3.setColumns(10);
 		}
 		{
 			txt4 = new JTextField();
-			txt4.setBounds(126, 80, 95, 20);
+			txt4.setBounds(143, 80, 95, 20);
 			contentPanel.add(txt4);
 			txt4.setColumns(10);
 		}

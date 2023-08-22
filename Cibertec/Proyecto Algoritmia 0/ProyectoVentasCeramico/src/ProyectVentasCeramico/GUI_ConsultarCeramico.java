@@ -95,56 +95,56 @@ public class GUI_ConsultarCeramico extends JDialog implements ActionListener {
 		cboMode = new JComboBox();
 		cboMode.addActionListener(this);
 		cboMode.setModel(new DefaultComboBoxModel(new String[] {"Cinza Plus", "Luxury", "Austria", "Yungay Mix", "Thalía"}));
-		cboMode.setBounds(83, 20, 220, 22);
+		cboMode.setBounds(94, 20, 220, 22);
 		getContentPane().add(cboMode);
 		
 		lblNewLabel_1 = new JLabel("Precio (S/)");
-		lblNewLabel_1.setBounds(10, 61, 58, 14);
+		lblNewLabel_1.setBounds(10, 61, 85, 14);
 		getContentPane().add(lblNewLabel_1);
 		
 		txtPrecio = new JTextField();
 		txtPrecio.setEditable(false);
-		txtPrecio.setBounds(83, 58, 220, 20);
+		txtPrecio.setBounds(94, 58, 220, 20);
 		getContentPane().add(txtPrecio);
 		txtPrecio.setColumns(10);
 		
 		txtAncho = new JTextField();
 		txtAncho.setEditable(false);
-		txtAncho.setBounds(83, 95, 220, 20);
+		txtAncho.setBounds(94, 95, 220, 20);
 		getContentPane().add(txtAncho);
 		txtAncho.setColumns(10);
 		
 		lblNewLabel_2 = new JLabel("Ancho (cm)");
-		lblNewLabel_2.setBounds(10, 98, 58, 14);
+		lblNewLabel_2.setBounds(10, 98, 85, 14);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Largo (cm)");
-		lblNewLabel_3.setBounds(10, 130, 58, 14);
+		lblNewLabel_3.setBounds(10, 130, 95, 14);
 		getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("Espesor (mm)");
-		lblNewLabel_4.setBounds(10, 166, 75, 14);
+		lblNewLabel_4.setBounds(10, 166, 95, 14);
 		getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("Contenido");
-		lblNewLabel_5.setBounds(10, 198, 66, 14);
+		lblNewLabel_5.setBounds(10, 198, 85, 14);
 		getContentPane().add(lblNewLabel_5);
 		
 		txtLargo = new JTextField();
 		txtLargo.setEditable(false);
-		txtLargo.setBounds(83, 127, 220, 20);
+		txtLargo.setBounds(94, 127, 220, 20);
 		getContentPane().add(txtLargo);
 		txtLargo.setColumns(10);
 		
 		txtEspe = new JTextField();
 		txtEspe.setEditable(false);
-		txtEspe.setBounds(83, 163, 220, 20);
+		txtEspe.setBounds(94, 163, 220, 20);
 		getContentPane().add(txtEspe);
 		txtEspe.setColumns(10);
 		
 		txtConte = new JTextField();
 		txtConte.setEditable(false);
-		txtConte.setBounds(83, 195, 220, 20);
+		txtConte.setBounds(94, 195, 220, 20);
 		getContentPane().add(txtConte);
 		txtConte.setColumns(10);
 		
