@@ -1,0 +1,41 @@
+package gui;
+
+public class Factura {
+	private String ruc,empresa;
+	private int unidades;
+	private double precioUni;
+	
+	private static int cantidad;
+
+	private static double totImporteFac;
+	
+	public static final String texto;
+	
+	static {
+		cantidad=0;
+		totImporteFac=0.0;
+		texto="Sunat";
+	}
+
+	public Factura(String ruc, String empresa, int unidades, double precioUni) {
+		//Inicializar todos	los atributos
+		this.ruc = ruc;
+		this.empresa = empresa;
+		this.unidades = unidades;
+		this.precioUni = precioUni;
+		cantidad++;
+		//acumulando el total facturado
+		totImporteFac+=ImporteFacturado();
+		
+	}
+	
+	public Factura(String ruc, String empresa) {
+		this(ruc,empresa,10,50.0);
+	}
+	public Factura() {
+		this("");
+	}
+
+
+	
+}

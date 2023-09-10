@@ -1,0 +1,84 @@
+package gui;
+
+public class Movil {
+	private int nromovil;
+	private String nombre;
+	private int segCons;
+	private double precioxSeg;
+	
+	
+	private static int cantidad;
+	private static double todImpPagar;
+
+	public static double IGV;	
+	static {
+		IGV=0.18;
+		cantidad=0;
+		todImpPagar=0.0;
+	}
+	public Movil(int nromovil, String nombre, int segCons, double precioxSeg) {
+		super();
+		this.nromovil = nromovil;
+		this.nombre = nombre;
+		this.segCons = segCons;
+		this.precioxSeg = precioxSeg;
+		cantidad++;
+		todImpPagar+=costoxConsumo();
+		
+	}
+	public Movil(int nromovil, String nombre) {
+		this(nromovil, nombre,75,0.28);
+	}
+	public Movil() {
+		this(987656789, "Juan");
+	}
+	public int getNromovil() {
+		return nromovil;
+	}
+	public void setNromovil(int nromovil) {
+		this.nromovil = nromovil;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getSegCons() {
+		return segCons;
+	}
+	public void setSegCons(int segCons) {
+		this.segCons = segCons;
+	}
+	public double getPrecioxSeg() {
+		return precioxSeg;
+	}
+	public void setPrecioxSeg(double precioxSeg) {
+		this.precioxSeg = precioxSeg;
+	}
+	public static int getCantidad() {
+		return cantidad;
+	}
+	public static void setCantidad(int cantidad) {
+		Movil.cantidad = cantidad;
+	}
+	public static double getTodImpPagar() {
+		return todImpPagar;
+	}
+	public static void setTodImpPagar(double todImpPagar) {
+		Movil.todImpPagar = todImpPagar;
+	}
+	public static double getIGV() {
+		return IGV;
+	}
+	public static void setIGV(double iGV) {
+		IGV = iGV;
+	}
+	public double costoxConsumo() {
+		return precioxSeg*segCons;
+	}
+	public double costoxConsumo() {
+		return
+	}
+
+}

@@ -1,0 +1,35 @@
+package gui;
+
+public class Movil {
+	private int nromovil;
+	private String nombre;
+	private int segCons;
+	private double precioxSeg;
+	
+	
+	private static int cantidad;
+	private static double todImpPagar;
+
+	public static double IGV;	
+	static {
+		IGV=0.18;
+		cantidad=0;
+		todImpPagar=0.0;
+	}
+	public Movil(int nromovil, String nombre, int segCons, double precioxSeg) {
+		super();
+		this.nromovil = nromovil;
+		this.nombre = nombre;
+		this.segCons = segCons;
+		this.precioxSeg = precioxSeg;
+		cantidad++;
+		todImpPagar+=TotalPagar;
+		
+	}
+	public Movil(int nromovil, String nombre) {
+		this(nromovil, nombre,75,0.28);
+	}
+	public Movil() {
+		this(98348460, "Jose");
+	}
+}

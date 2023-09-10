@@ -1,0 +1,21 @@
+package gui;
+
+public class Empleado {
+	private int codigo;
+	private String nombre;
+	private int categoria;
+	private int nrocel;
+	
+	private static int cantidad;
+	
+	private static double sueldosNetos;
+	
+	public static final double desc;
+
+	static{
+		cantidad =0;
+		sueldosNetos=0.0;
+		 desc=0.15;	 
+	}
+	
+}

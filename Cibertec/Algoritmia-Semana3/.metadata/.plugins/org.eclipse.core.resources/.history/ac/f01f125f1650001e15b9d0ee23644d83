@@ -1,0 +1,74 @@
+package gui;
+
+public class Empleado {
+	private int codigo;
+	private String nombre;
+	private int categoria;
+	private int nrocel;
+	
+	private static int cantidad;
+	
+	private static double sueldosNetos;
+	
+	public static final double desc;
+
+	static{
+		cantidad =0;
+		sueldosNetos=0.0;
+		 desc=0.15;	 
+	}
+
+	public Empleado(int codigo, String nombre, int categoria, int nrocel) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.categoria = categoria;
+		this.nrocel = nrocel;
+	}
+	public Empleado(int codigo, String nombre) {
+		this(codigo,nombre,3,999999999);
+	}
+	public Empleado() {
+		this(983548460,"Jose");
+	}
+	public int getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(int categoria) {
+		this.categoria = categoria;
+	}
+	public int getNrocel() {
+		return nrocel;
+	}
+	public void setNrocel(int nrocel) {
+		this.nrocel = nrocel;
+	}
+	public static int getCantidad() {
+		return cantidad;
+	}
+	public static void setCantidad(int cantidad) {
+		Empleado.cantidad = cantidad;
+	}
+	public static double getSueldosNetos() {
+		return sueldosNetos;
+	}
+	public static void setSueldosNetos(double sueldosNetos) {
+		Empleado.sueldosNetos = sueldosNetos;
+	}
+	public static double getDesc() {
+		return desc;
+	}
+	
+}

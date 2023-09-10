@@ -1,0 +1,10 @@
+INDEX VERSION 1.132+D:\Algoritmia-Semana3\.metadata\.plugins\org.eclipse.jdt.core
+1515015936.index
+759857046.index
+2232132655.index
+1795540227.index
+14526675.index
+469955989.index
+1865797976.index
+3959137331.index
+3276021434.index
