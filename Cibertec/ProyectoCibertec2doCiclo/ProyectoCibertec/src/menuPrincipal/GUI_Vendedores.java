@@ -1,0 +1,157 @@
+package menuPrincipal;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JTable;
+
+public class GUI_Vendedores extends JFrame {
+
+	private JPanel contentPane;
+	private JButton btnModificacion;
+	private JButton btnConsulta;
+	private JButton btnEliminacion;
+	private JButton btnListado;
+	private JButton btnIngreso;
+	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
+	private JTextField textField;
+	private JLabel lblNewLabel_2;
+	private JTextField textField_1;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
+	private JLabel lblNewLabel_6;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUI_Vendedores frame = new GUI_Vendedores();
+					frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+	}
+	
+	public GUI_Vendedores() {
+		initialize();
+		
+	}
+	
+	private void initialize() {
+		setTitle("Vendedores");
+		setBounds(100, 100, 531, 537);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		btnModificacion = new JButton("Modificación");
+		btnModificacion.setBounds(319, 146, 122, 23);
+		contentPane.add(btnModificacion);
+		
+		btnConsulta = new JButton("Consulta");
+		btnConsulta.setBounds(319, 180, 122, 23);
+		contentPane.add(btnConsulta);
+		
+		btnEliminacion = new JButton("Eliminación");
+		btnEliminacion.setBounds(319, 214, 122, 23);
+		contentPane.add(btnEliminacion);
+		
+		btnListado = new JButton("Listado");
+		btnListado.setBounds(319, 109, 122, 23);
+		contentPane.add(btnListado);
+		
+		btnIngreso = new JButton("Ingreso");
+		btnIngreso.setBounds(319, 75, 122, 23);
+		contentPane.add(btnIngreso);
+		
+		lblNewLabel = new JLabel("MANTENIMIENTO VENDEDORES");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblNewLabel.setBounds(33, 11, 472, 53);
+		contentPane.add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("Código Vendedor");
+		lblNewLabel_1.setBounds(10, 79, 99, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		textField = new JTextField();
+		textField.setBounds(107, 75, 129, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		lblNewLabel_2 = new JLabel("Categoría");
+		lblNewLabel_2.setBounds(33, 112, 76, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(107, 106, 129, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		lblNewLabel_3 = new JLabel("Nombres");
+		lblNewLabel_3.setBounds(33, 150, 64, 14);
+		contentPane.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("Apellidos");
+		lblNewLabel_4.setBounds(33, 183, 64, 14);
+		contentPane.add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("Teléfono");
+		lblNewLabel_5.setBounds(33, 219, 76, 14);
+		contentPane.add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("DNI");
+		lblNewLabel_6.setBounds(33, 254, 76, 14);
+		contentPane.add(lblNewLabel_6);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(107, 147, 129, 20);
+		contentPane.add(textField_2);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(107, 180, 129, 20);
+		contentPane.add(textField_3);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(107, 216, 86, 20);
+		contentPane.add(textField_4);
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(107, 251, 86, 20);
+		contentPane.add(textField_5);
+		
+		table = new JTable();
+		table.setBounds(10, 282, 495, 205);
+		contentPane.add(table);
+	}
+	
+	
+}

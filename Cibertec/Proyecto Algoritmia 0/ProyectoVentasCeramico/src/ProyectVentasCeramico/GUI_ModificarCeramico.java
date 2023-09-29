@@ -164,6 +164,7 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		btnGrabar.setBounds(335, 50, 89, 23);
 		contentPanel.add(btnGrabar);
 	}
+	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnCerrar) {
 			actionPerformedBtnCerrar(e);

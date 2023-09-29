@@ -1,0 +1,67 @@
+package menuPrincipal;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class GUI_Reportes extends JFrame {
+
+	private JPanel contentPane;
+	private final JComboBox cboReportes = new JComboBox();
+	private JTextArea txtS;
+	private JScrollPane scrollPane;
+	private JLabel lblNewLabel;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUI_Reportes frame = new GUI_Reportes();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public GUI_Reportes() {
+		setTitle("Reportes");
+		setBounds(100, 100, 495, 378);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		cboReportes.setModel(new DefaultComboBoxModel(new String[] {"Reporte general por productos", "Reporte general por vendedores", "Reporte por vendedor", "Reporte por producto", "Reporte de precios"}));
+		cboReportes.setBounds(28, 47, 421, 20);
+		contentPane.add(cboReportes);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 78, 459, 255);
+		contentPane.add(scrollPane);
+		
+		txtS = new JTextArea();
+		scrollPane.setViewportView(txtS);
+		
+		lblNewLabel = new JLabel("REPORTES");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 27));
+		lblNewLabel.setBounds(152, 11, 180, 25);
+		contentPane.add(lblNewLabel);
+	}
+
+}
