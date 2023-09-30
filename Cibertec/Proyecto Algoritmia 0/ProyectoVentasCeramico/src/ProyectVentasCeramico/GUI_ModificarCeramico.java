@@ -13,6 +13,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 
@@ -155,13 +156,14 @@ public class GUI_ModificarCeramico extends JDialog implements ActionListener {
 		txtConte.setColumns(10);
 		
 		btnCerrar = new JButton("Cerrar");
+		btnCerrar.setIcon(new ImageIcon("C:\\Users\\ericka\\Desktop\\doce-sete-de-dezembro-kai-havertz-24461742-071220221328.jpg"));
 		btnCerrar.addActionListener(this);
-		btnCerrar.setBounds(335, 19, 89, 23);
+		btnCerrar.setBounds(335, 18, 73, 61);
 		contentPanel.add(btnCerrar);
 		
 		btnGrabar = new JButton("Grabar");
 		btnGrabar.addActionListener(this);
-		btnGrabar.setBounds(335, 50, 89, 23);
+		btnGrabar.setBounds(335, 103, 89, 23);
 		contentPanel.add(btnGrabar);
 	}
 	
